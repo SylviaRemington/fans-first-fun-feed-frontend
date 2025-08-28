@@ -16,7 +16,8 @@ const NavBar = () => {
       {user ? (
         <ul>
           <li>Welcome, {user.username}</li>
-          <li><Link to='/'>Dashboard</Link></li>
+          <li><Link to='/'>Home</Link></li>
+          <li><Link to='/funmoments'>FunMoments</Link></li>
           <li><Link to='/' onClick={handleSignOut}>Sign Out</Link></li>
         </ul>
       ) : (
@@ -31,4 +32,5 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
 
