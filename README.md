@@ -1,5 +1,4 @@
 # Fans First Fun Feed - Frontend 
-(no markdown yet - to come soon!)
 
 ## User stories
 
