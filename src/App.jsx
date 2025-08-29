@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router';
 import * as funmomentService from './services/funmomentService';
 
@@ -13,6 +13,9 @@ import { UserContext } from './contexts/UserContext';
 
 const App = () => {
   const { user } = useContext(UserContext);
+  const [funmoments, setFunMoments] = useState([]);
+
+  useEffect(() => {}, []);
   
   return (
     <>
