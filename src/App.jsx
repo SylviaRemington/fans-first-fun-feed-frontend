@@ -15,7 +15,11 @@ const App = () => {
   const { user } = useContext(UserContext);
   const [funmoments, setFunMoments] = useState([]);
 
-  useEffect(() => {}, []);
+  // need to set up a useEffect hook that will fetch the data
+  useEffect(() => {
+    // in here is where it will fetch the funmoments
+    // and when fetch the funmoments, gonna need state
+  }, []);
   
   return (
     <>
