@@ -1,6 +1,14 @@
 // Starting with simple function to check to make sure everything is working
-const FunMomentList = (props) => {
-  return <main>Fun Moment List</main>;
+const FunMomentList = ({ funmoments }) => {
+  // return <main>Fun Moment List</main>;
+  // update the UI in FunMomentList to show any data/funmoments that comes back
+  return (
+    <main>
+      {props.funmoments.map((funmoment) => (
+        <p key={funmoment._id}>{funmoment.title}</p>
+      ))}
+    </main>
+  );
 };
 
 export default FunMomentList;
