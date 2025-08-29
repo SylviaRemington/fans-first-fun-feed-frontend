@@ -20,6 +20,7 @@ const App = () => {
         <Route path='/' element={user ? <Dashboard /> : <Landing />} />
         <Route path='/sign-up' element={<SignUpForm />} />
         <Route path='/sign-in' element={<SignInForm />} />
+        {/* Protected Route below /funmoments that is only available if you are signed in as a user. */}
         <Route path='funmoments' element={<FunMomentList />}></Route>
       </Routes>
     </>
