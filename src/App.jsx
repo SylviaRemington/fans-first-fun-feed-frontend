@@ -41,7 +41,7 @@ const App = () => {
         <Route path='/sign-in' element={<SignInForm />} />
         {/* Protected Route below /funmoments that is only available if you are signed in as a user. */}
         {/* Need to pass the FunMoments data in into the FunMomentList. */}
-        <Route path='funmoments' element={<FunMomentList />}></Route>
+        <Route path='funmoments' element={<FunMomentList funmoments={funmoments} />}></Route>
       </Routes>
     </>
   );
