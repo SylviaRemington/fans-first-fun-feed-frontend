@@ -16,10 +16,21 @@ const App = () => {
   const [funmoments, setFunMoments] = useState([]);
 
   // need to set up a useEffect hook that will fetch the data
-  useEffect(() => {
+  // useEffect(() => {
     // in here is where it will fetch the funmoments
     // and when fetch the funmoments, gonna need state
-  }, []);
+  // }, []);
+
+  useEffect(() => {
+    const fetchAllFunMoments = async () => {
+      const funmomentsData = await funmomentService.index();
+  
+      // console log to verify
+      console.log('funmomentsData:', funmomentsData);
+      setFunMoments(funmomentsData);
+    };
+    if (user) fetchAllFunMoments();
+  }, [user]);
   
   return (
     <>
