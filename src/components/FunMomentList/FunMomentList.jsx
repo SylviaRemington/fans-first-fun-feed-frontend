@@ -4,7 +4,7 @@ const FunMomentList = ({ funmoments }) => {
   // update the UI in FunMomentList to show any data/funmoments that comes back
   return (
     <main>
-      {props.funmoments.map((funmoment) => (
+      {funmoments.map((funmoment) => (
         <p key={funmoment._id}>{funmoment.title}</p>
       ))}
     </main>
