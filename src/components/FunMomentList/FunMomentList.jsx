@@ -27,7 +27,8 @@ const FunMomentList = ({ funmoments }) => {
   return (
     <main>
       {funmoments.map((funmoment) => (
-        // turning each component into a link
+        // turning each component into a link & configuring the link
+        // Link is the othermost element of when you map
         <Link key={funmoment._id} to={`/${funmoment._id}`}>
           <article>
             <header>
