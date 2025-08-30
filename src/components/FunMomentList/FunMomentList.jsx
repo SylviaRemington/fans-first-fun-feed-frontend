@@ -29,7 +29,7 @@ const FunMomentList = ({ funmoments }) => {
       {funmoments.map((funmoment) => (
         // turning each component into a link & configuring the link
         // Link is the othermost element of when you map
-        <Link key={funmoment._id} to={`/${funmoment._id}`}>
+        <Link key={funmoment._id} to={`/funmoments/${funmoment._id}`}>
           <article>
             <header>
               <h2>{funmoment.title}</h2>
