@@ -29,9 +29,10 @@ const FunMomentList = ({ funmoments }) => {
       {funmoments.map((funmoment) => (
         // turning each component into a link
         <Link key={funmoment._id} to={`/${funmoment._id}`}>
-        <p >{funmoment.title}</p>
+          <p >{funmoment.title}</p>
+        </Link>
       ))}
-      </Link>
+
     </main>
   );
 };
