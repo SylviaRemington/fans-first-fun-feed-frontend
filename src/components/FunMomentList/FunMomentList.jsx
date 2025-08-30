@@ -29,7 +29,16 @@ const FunMomentList = ({ funmoments }) => {
       {funmoments.map((funmoment) => (
         // turning each component into a link
         <Link key={funmoment._id} to={`/${funmoment._id}`}>
-          <p >{funmoment.title}</p>
+          <article>
+            <header>
+              <h2>{funmoment.title}</h2>
+              <p>
+                {`${funmoment.author.username} posted on
+                ${new Date(funmoment.createdAt).toLocaleDateString()}`}
+              </p>
+            </header>
+            <p>{funmoment.text}</p>
+          </article>
         </Link>
       ))}
 
