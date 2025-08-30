@@ -5,8 +5,8 @@ import * as funmomentService from '../../services/funmomentService';
 const FunMomentDetails = () => {
 
     // Original Version
-    const params = useParams; //Wrong: This assigns the useParams function itself, not its result.
-    console.log(params.id); //This logs undefined because params is the function, not an object.
+    const params = useParams (); 
+    console.log(params.id); 
 
     // Addtl Version
     // const { id } = useParams;
