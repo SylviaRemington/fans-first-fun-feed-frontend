@@ -14,6 +14,7 @@ import { UserContext } from './contexts/UserContext';
 
 const App = () => {
   const { user } = useContext(UserContext);
+  // creating a new useState()
   const [funmoments, setFunMoments] = useState([]);
 
   // need to set up a useEffect hook that will fetch the data
@@ -22,6 +23,7 @@ const App = () => {
     // and when fetch the funmoments, gonna need state
   // }, []);
 
+  // Using our effect to trigger index() service function:
   useEffect(() => {
     const fetchAllFunMoments = async () => {
       const funmomentsData = await funmomentService.index();
