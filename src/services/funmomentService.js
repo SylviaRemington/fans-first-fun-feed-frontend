@@ -25,9 +25,9 @@ const index = async () => {
 
 
 // show function
-const show = async (hootId) => {
+const show = async (id) => {
   try {
-    const res = await axios.get(`${BASE_URL}/${hootId}`, {
+    const res = await axios.get(`${BASE_URL}/${id}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     });
     return res.data;
