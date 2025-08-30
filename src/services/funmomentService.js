@@ -37,6 +37,4 @@ const show = async (hootId) => {
 };
 
 
-export { 
-  index,
-};
+export { index, show};
