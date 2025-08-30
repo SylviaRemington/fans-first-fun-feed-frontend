@@ -1,3 +1,5 @@
+import { Link } from 'react-router';
+
 // The commented out info is a reference so that I fully know what a Fun Moment looks like (from Postman)
 // For reference when I write code.
 
@@ -25,8 +27,11 @@ const FunMomentList = ({ funmoments }) => {
   return (
     <main>
       {funmoments.map((funmoment) => (
-        <p key={funmoment._id}>{funmoment.title}</p>
+        // turning each component into a link
+        <Link key={funmoment._id} to={`/${funmoment._id}`}>
+        <p >{funmoment.title}</p>
       ))}
+      </Link>
     </main>
   );
 };
