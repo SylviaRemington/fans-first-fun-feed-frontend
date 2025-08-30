@@ -27,10 +27,10 @@ const index = async () => {
 // show function
 const show = async (hootId) => {
   try {
-    const res = await fetch(`${BASE_URL}/${hootId}`, {
+    const res = await axios.get(`${BASE_URL}/${hootId}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     });
-    return res.json();
+    return res.data;
   } catch (error) {
     console.log(error);
   }
