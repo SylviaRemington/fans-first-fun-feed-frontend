@@ -23,6 +23,7 @@ const index = async () => {
   }
 };
 
+
 // show function
 const show = async (hootId) => {
   try {
@@ -34,6 +35,7 @@ const show = async (hootId) => {
     console.log(error);
   }
 };
+
 
 export { 
   index,
