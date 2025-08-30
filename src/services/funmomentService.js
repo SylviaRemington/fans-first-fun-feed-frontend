@@ -16,8 +16,20 @@ const index = async () => {
     const res = await axios.get(BASE_URL, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     });
-    
+
     return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// show function
+const show = async (hootId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${hootId}`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+    });
+    return res.json();
   } catch (error) {
     console.log(error);
   }
