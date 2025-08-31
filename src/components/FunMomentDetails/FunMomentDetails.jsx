@@ -31,7 +31,28 @@ const FunMomentDetails = () => {
 
     if (!funmoment) return <main>Loading...</main>;
 
-    return <main>Fun Moment Details</main>;
+    // Original return used:
+    // return <main>Fun Moment Details</main>;
+
+    // Updated return using now:
+    return (
+    <main>
+      <section>
+        <header>
+          <p>{funmoment.category.toUpperCase()}</p>
+          <h1>{funmoment.title}</h1>
+          <p>
+            {`${funmoment.author.username} posted on
+            ${new Date(funmoment.createdAt).toLocaleDateString()}`}
+          </p>
+        </header>
+        <p>{funmoment.text}</p>
+      </section>
+      <section>
+        <h2>Comments</h2>
+      </section>
+    </main>
+  );
 };
 
 export default FunMomentDetails;
