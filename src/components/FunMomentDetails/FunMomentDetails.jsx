@@ -9,7 +9,7 @@ const FunMomentDetails = () => {
     console.log(params.id); 
 
     const [funmoment, setFunMoment] = useParams(null);
-    const funmomentId = params.id
+    const funmomentId = params.id;
 
     // Addtl Version
     // const { id } = useParams;
@@ -23,7 +23,7 @@ const FunMomentDetails = () => {
             setFunMoment(funmomentToShow);
         };
         getData();
-    }, []);
+    }, [funmomentId]);
 
     return <main>Fun Moment Details</main>;
 };
