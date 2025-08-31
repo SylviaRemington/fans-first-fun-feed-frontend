@@ -1,10 +1,9 @@
 import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router";
-import CommentForm from '../CommentForm/CommentForm';
-import * as funmomentService from '../../services/funmomentService';
+import CommentForm from "../CommentForm/CommentForm";
+import * as funmomentService from "../../services/funmomentService";
 
-import { UserContext } from '../../contexts/UserContext';
-
+import { UserContext } from "../../contexts/UserContext";
 
 const FunMomentDetails = () => {
   // Setting up the useContext & UserContext here:
@@ -25,7 +24,7 @@ const FunMomentDetails = () => {
   useEffect(() => {
     // Setting up our data fetching function & call the show function with that id (because the funmomentService needs the id for the show function)
     const getData = async () => {
-      const funmomentToShow = await funmomentService.show(funmomentId);  //!check this id part to make sure I don't need funmomentId instead. Was originally params.id & I changed it; but not sure if it should have been params.funmomentId.
+      const funmomentToShow = await funmomentService.show(funmomentId); //!check this id part to make sure I don't need funmomentId instead. Was originally params.id & I changed it; but not sure if it should have been params.funmomentId.
       console.log(funmomentToShow);
       setFunMoment(funmomentToShow);
     };
@@ -33,22 +32,28 @@ const FunMomentDetails = () => {
   }, [funmomentId]);
 
   const handleAddComment = async (commentFormData) => {
-    const newComment = await funmomentService.createComment(funmomentId, commentFormData);
+    const newComment = await funmomentService.createComment(
+      funmomentId,
+      commentFormData
+    );
 
     // the spread funmoment, updating the comments with the existing ones, and then the new one
     // Spreading in the original funmoment, taking the comments on the funmoment, spreading the original comments and adding the newComment.
-    setFunMoment({ ...funmoment, comments: [...funmoment.comments, newComment] });
+    setFunMoment({
+      ...funmoment,
+      comments: [...funmoment.comments, newComment],
+    });
   };
 
   // Verifying the funmoment state is set correctly:
-  console.log('funmoment state:', funmoment);
+  console.log("funmoment state:", funmoment);
 
   if (!funmoment) return <main>Loading...</main>;
 
   // Original return used:
   // return <main>Fun Moment Details</main>;
 
-  // Updated return using now:
+  // Updated return I'm using now:
   return (
     <main>
       <section>
@@ -59,6 +64,12 @@ const FunMomentDetails = () => {
             {`${funmoment.author.username} posted on
             ${new Date(funmoment.createdAt).toLocaleDateString()}`}
           </p>
+          {/* Currently just working on delete functionality of comments. */}
+          {/* {funmoment.author._id === user._id && (
+            <>
+              <button>Delete</button>
+            </>
+          )} */}
         </header>
         <p>{funmoment.text}</p>
       </section>
@@ -77,7 +88,11 @@ const FunMomentDetails = () => {
         <CommentForm handleAddComment={handleAddComment} />
 
         {/* THIS LINE BELOW I MIGHT TAKE OUT ONCE I'VE FULLY FINISHED THE APP. */}
-        {!funmoment.comments.length && <p>There are no comments currently. Be the first to comment! Yuuus.</p>}
+        {!funmoment.comments.length && (
+          <p>
+            There are no comments currently. Be the first to comment! Yuuus.
+          </p>
+        )}
 
         {funmoment.comments.map((comment) => (
           <article key={comment._id}>
@@ -86,12 +101,16 @@ const FunMomentDetails = () => {
                 {`${comment.author.username} posted on
                 ${new Date(comment.createdAt).toLocaleDateString()}`}
               </p>
+              {comment.author._id === user._id && (
+                <>
+                  <button>Delete</button>
+                </>
+              )}
             </header>
             <p>{comment.text}</p>
           </article>
         ))}
       </section>
-
     </main>
   );
 };
