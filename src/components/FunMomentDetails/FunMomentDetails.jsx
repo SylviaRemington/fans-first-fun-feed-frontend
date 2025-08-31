@@ -8,7 +8,8 @@ const FunMomentDetails = () => {
     const params = useParams (); 
     console.log(params.id); 
 
-    const [funmoment, setFunMoment] = useParams(null);
+    // The 'funmoment' in the state is what I'll be using in my return.
+    const [funmoment, setFunMoment] = useState(null);
     const funmomentId = params.id;
 
     // Addtl Version
