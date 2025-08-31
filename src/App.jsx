@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router';
 import * as funmomentService from './services/funmomentService';
+import * as funmomentService from "../../services/funmomentService";
 
 import NavBar from './components/NavBar/NavBar';
 import SignUpForm from './components/SignUpForm/SignUpForm';
@@ -35,6 +36,8 @@ const App = () => {
     };
     if (user) fetchAllFunMoments();
   }, [user]);
+
+
   
   return (
     <>
