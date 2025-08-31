@@ -13,10 +13,12 @@ const FunMomentForm = (props) => {
     category: 'Trick Plays',
   });
 
+  //handleChange function
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value });
   };
 
+  //handleSubmit function
   const handleSubmit = (evt) => {
     evt.preventDefault();
     console.log('formData', formData);
@@ -45,6 +47,8 @@ const FunMomentForm = (props) => {
           onChange={handleChange}
         />
         <label htmlFor='category-input'>Category</label>
+
+        {/* This below handles the enum for the category between the select tags. */}
         <select
           required
           name='category'
@@ -61,8 +65,8 @@ const FunMomentForm = (props) => {
           <option value='Umpire Moves'>Umpire Moves</option>
           <option value='Mascot'>Mascot</option>
           <option value='Funny Audience Games'>Funny Audience Games</option>
-          
         </select>
+
         <button type='submit'>SUBMIT</button>
       </form>
     </main>
