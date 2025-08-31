@@ -46,7 +46,7 @@ const App = () => {
         {/* Need to pass the FunMoments data in into the FunMomentList component. */}
         <Route path='funmoments' element={<FunMomentList funmoments={funmoments} />} />
         <Route path="/funmoments/:id" element={<FunMomentDetails/>} />
-        <Route path='/funmoments/new' element={<h1>New Fun Moment</h1>} />
+        <Route path='/funmoments/new' element={<p>New Fun Moment</p>} />
       </Routes>
     </>
   );
