@@ -53,7 +53,7 @@ const create = async (formData) => {
 // create comment function for comment section
 const createComment = async (funmomentId, comment) => {
   try {
-    const res = await axios.post(`${BASE_URL}/funmoments/${funmomentId}/comments`, comment, {
+    const res = await axios.post(`${BASE_URL}/${funmomentId}/comments`, comment, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     });
     return res.data;
