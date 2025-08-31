@@ -45,6 +45,7 @@ const App = () => {
       const newFunMoment = await funmomentService.create(formData);
       // console.log("SUCCESS", newFunMoment);
       navigate('/funmoments');
+      setFunMoments([...funmoments, newFunMoment]);
     } catch (error) {
       console.log(error);
     }
