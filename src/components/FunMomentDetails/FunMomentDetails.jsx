@@ -48,9 +48,31 @@ const FunMomentDetails = () => {
         </header>
         <p>{funmoment.text}</p>
       </section>
+
+      {/* Originally just had this basic comments section. */}
+      {/* <section>
+        <h2>Comments</h2>
+      </section> */}
+
+      {/* Updated comments section */}
       <section>
         <h2>Comments</h2>
+
+        {!funmoment.comments.length && <p>There are no comments.</p>}
+
+        {funmoment.comments.map((comment) => (
+          <article key={comment._id}>
+            <header>
+              <p>
+                {`${comment.author.username} posted on
+                ${new Date(comment.createdAt).toLocaleDateString()}`}
+              </p>
+            </header>
+            <p>{comment.text}</p>
+          </article>
+        ))}
       </section>
+
     </main>
   );
 };
