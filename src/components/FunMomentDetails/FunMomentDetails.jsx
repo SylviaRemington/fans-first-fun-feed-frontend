@@ -25,6 +25,7 @@ const FunMomentDetails = () => {
         };
         getData();
     }, [funmomentId]);
+    
     // Verifying the funmoment state is set correctly:
     console.log('funmoment state:', funmoment);
 
