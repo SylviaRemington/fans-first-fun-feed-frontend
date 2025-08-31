@@ -28,6 +28,8 @@ const FunMomentDetails = () => {
         getData();
     }, [funmomentId]);
 
+    const handleAddComment
+
     // Verifying the funmoment state is set correctly:
     console.log('funmoment state:', funmoment);
 
@@ -62,7 +64,7 @@ const FunMomentDetails = () => {
 
         {/* Putting CommentForm Here */}
         <CommentForm />
-        
+
         {/* THIS LINE BELOW I MIGHT TAKE OUT ONCE I'VE FULLY FINISHED THE APP. */}
         {!funmoment.comments.length && <p>There are no comments currently. Be the first to comment! Yuuus.</p>}
 
