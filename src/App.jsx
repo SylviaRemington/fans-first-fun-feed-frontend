@@ -9,6 +9,7 @@ import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
 import FunMomentList from './components/FunMomentList/FunMomentList';
 import FunMomentDetails from './components/FunMomentDetails/FunMomentDetails';
+import FunMomentForm from './components/FunMomentForm/FunMomentForm';
 
 import { UserContext } from './contexts/UserContext';
 
@@ -46,7 +47,7 @@ const App = () => {
         {/* Need to pass the FunMoments data in into the FunMomentList component. */}
         <Route path='funmoments' element={<FunMomentList funmoments={funmoments} />} />
         <Route path="/funmoments/:id" element={<FunMomentDetails/>} />
-        <Route path='/funmoments/new' element={<p>New Fun Moment</p>} />
+        <Route path='/funmoments/new' element={<FunMomentForm />} />
       </Routes>
     </>
   );
