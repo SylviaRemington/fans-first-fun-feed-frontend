@@ -7,7 +7,7 @@ import { useState } from "react";
 // }
 // export default FunMomentForm;
 
-const FunMomentForm = (props) => {
+const FunMomentForm = ({handleAddFunMoment}) => {
   const [formData, setFormData] = useState({
     title: "",
     text: "",
@@ -33,6 +33,7 @@ const FunMomentForm = (props) => {
   const handleSubmit = async (evt) => {
     evt.preventDefault();
     console.log("formData", formData);
+    handleAddFunMoment(formData);
   };
 
   return (
