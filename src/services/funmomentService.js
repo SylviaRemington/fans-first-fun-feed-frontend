@@ -25,9 +25,9 @@ const index = async () => {
 
 
 // show function
-const show = async (id) => {
+const show = async (funmomentId) => {
   try {
-    const res = await axios.get(`${BASE_URL}/${id}`, {
+    const res = await axios.get(`${BASE_URL}/${funmomentId}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     });
     return res.data;

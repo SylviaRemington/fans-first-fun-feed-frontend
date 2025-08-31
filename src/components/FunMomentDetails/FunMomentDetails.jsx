@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import * as funmomentService from '../../services/funmomentService';
 
@@ -8,6 +8,9 @@ const FunMomentDetails = () => {
     const params = useParams (); 
     console.log(params.id); 
 
+    const [funmoment, setFunMoment] = useParams(null);
+    const funmomentId = params.id
+
     // Addtl Version
     // const { id } = useParams;
     // console.log(id);
@@ -15,8 +18,9 @@ const FunMomentDetails = () => {
     useEffect(() => {
         // Setting up our data fetching function & call the show function with that id (because the funmomentService needs the id for the show function)
         const getData = async () => {
-            const funmomentToShow = await funmomentService.show(params.id);
+            const funmomentToShow = await funmomentService.show(funmomentId);  //!check this id part to make sure I don't need funmomentId instead. Was originally params.id & I changed it; but not sure if it should have been params.funmomentId.
             console.log(funmomentToShow);
+            setFunMoment(funmomentToShow);
         };
         getData();
     }, []);
