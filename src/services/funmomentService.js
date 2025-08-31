@@ -48,5 +48,17 @@ const create = async (formData) => {
   }
 };
 
+// create comment function for comment section
+const createComment = async (commentText, id) => {
+  try {
+    const res = await axios.post(`${BASE_URL}/funmoments/${id}`, commentText, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+    });
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-export { index, show, create};
+
+export { index, show, create, createComment};

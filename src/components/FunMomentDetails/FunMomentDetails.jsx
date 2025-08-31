@@ -60,6 +60,9 @@ const FunMomentDetails = () => {
       <section>
         <h2>Comments</h2>
 
+        {/* Putting CommentForm Here */}
+        <CommentForm />
+        
         {/* THIS LINE BELOW I MIGHT TAKE OUT ONCE I'VE FULLY FINISHED THE APP. */}
         {!funmoment.comments.length && <p>There are no comments currently. Be the first to comment! Yuuus.</p>}
 
