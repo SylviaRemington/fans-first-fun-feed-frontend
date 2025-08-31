@@ -36,6 +36,7 @@ const show = async (funmomentId) => {
   }
 };
 
+// THIS CREATES THE FUNMOMENT. --caps so differentiate the two
 // create function for creating
 const create = async (formData) => {
   try {
@@ -48,6 +49,7 @@ const create = async (formData) => {
   }
 };
 
+// THIS CREATES THE COMMENT. --caps so differentiate the two
 // create comment function for comment section
 const createComment = async (commentText, id) => {
   try {
