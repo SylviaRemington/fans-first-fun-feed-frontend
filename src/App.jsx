@@ -38,7 +38,8 @@ const App = () => {
   }, [user]);
 
   //handle function
-  const handleAddFunMoment = async () => {
+  // My handleAddFunMoment needs to accept formData.
+  const handleAddFunMoment = async (formData) => {
     try {
       const newFunMoment = await funmomentService.create(formData);
       // console.log("SUCCESS", newFunMoment);
