@@ -1,16 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useParams } from "react-router";
 import CommentForm from '../CommentForm/CommentForm';
 import * as funmomentService from '../../services/funmomentService';
 
+import { UserContext } from '../../contexts/UserContext';
+
 
 const FunMomentDetails = () => {
+  // Setting up the useContext & UserContext here:
+  const { user } = useContext(UserContext);
 
-  // Original Version
+  // Original Version:
   const params = useParams();
   console.log(params.id);
 
-  // The 'funmoment' in the state is what I'll be using in my return.
+  // The 'funmoment' in the state is what I'll be using in my return:
   const [funmoment, setFunMoment] = useState(null);
   const funmomentId = params.id;
 
