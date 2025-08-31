@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-const CommentForm = (props) => {
+const CommentForm = ({ handleAddComment }) => {
   const [formData, setFormData] = useState({ text: '' });
 
   const handleChange = (evt) => {
@@ -12,6 +12,8 @@ const CommentForm = (props) => {
   const handleSubmit = (evt) => {
     evt.preventDefault();
     // add handleAddComment
+    // Need to pass in my handleAddComment into my handleSubmit - put prop onto the comment form but originally didn't call the handleAddComment function in handleSubmit.
+    handleAddComment(formData);
     setFormData({ text: '' });
   };
 
