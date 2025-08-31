@@ -28,7 +28,9 @@ const FunMomentDetails = () => {
         getData();
     }, [funmomentId]);
 
-    const handleAddComment
+    const handleAddComment = async (comment) => {
+      try 
+    }
 
     // Verifying the funmoment state is set correctly:
     console.log('funmoment state:', funmoment);
