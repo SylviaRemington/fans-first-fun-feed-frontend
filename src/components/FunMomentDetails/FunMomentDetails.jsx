@@ -33,7 +33,6 @@ const FunMomentDetails = () => {
     const newComment = await funmomentService.createComment(funmomentId, commentFormData);
     console.log('Got New Comment', newComment);
 
-
     // the spread funmoment, updating the comments with the existing ones, and then the new one
     setFunMoment({ ...funmoment, comments: [...funmoment.comments, newComment] });
   };
