@@ -1,5 +1,11 @@
 import { useState } from 'react';
 
+// When first start the code, using a super simple function to make sure code and route is working to browser.
+// const FunMomentForm = () => {
+//      return <p>This is the hoot form.</p>
+// }
+// export default FunMomentForm;
+
 const FunMomentForm = (props) => {
   const [formData, setFormData] = useState({
     title: '',
