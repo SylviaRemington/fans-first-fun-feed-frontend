@@ -65,6 +65,8 @@ const FunMomentDetails = () => {
             ${new Date(funmoment.createdAt).toLocaleDateString()}`}
           </p>
           {/* Currently just working on delete functionality of comments. */}
+          {/* This is where I will create delete functionality for the funmoment. */}
+          {/* ! */}
           {/* {funmoment.author._id === user._id && (
             <>
               <button>Delete</button>
