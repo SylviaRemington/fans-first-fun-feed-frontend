@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import * as funmomentService from "../../services/funmomentService";
 
 // When first start the code, using a super simple function to make sure code and route is working to browser.
 // const FunMomentForm = () => {
@@ -19,10 +20,11 @@ const FunMomentForm = (props) => {
   };
 
   //handleSubmit function
-  const handleSubmit = (evt) => {
+  const handleSubmit = async (evt) => {
     evt.preventDefault();
     console.log('formData', formData);
     // We'll update this function shortly...
+
   };
 
   return (
