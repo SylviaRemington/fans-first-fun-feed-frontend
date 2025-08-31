@@ -23,7 +23,13 @@ const FunMomentForm = (props) => {
   const handleSubmit = async (evt) => {
     evt.preventDefault();
     console.log('formData', formData);
-    // We'll update this function shortly...
+
+    try {
+        const newFunMoment = await funmomentService.create(formData)
+        console.log('SUCCESS', newFunMoment)
+    } catch (error) {
+        console.log(error);
+    }
 
   };
 
