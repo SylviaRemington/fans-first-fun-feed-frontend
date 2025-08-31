@@ -20,7 +20,7 @@ const FunMomentForm = ({handleAddFunMoment}) => {
   };
 
   //New addtl handle function here...
-  //   const handleAddFunMoment = async () => {
+  //   const handleAddFunMoment = async (formData) => {
   //     try {
   //       const newFunMoment = await funmomentService.create(formData);
   //       console.log("SUCCESS", newFunMoment);

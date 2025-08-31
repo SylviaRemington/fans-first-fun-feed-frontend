@@ -41,6 +41,7 @@ const App = () => {
   // My handleAddFunMoment needs to accept formData.
   const handleAddFunMoment = async (formData) => {
     try {
+      // creating new fun moment with funmomentService with the formData & then navigate to hoots
       const newFunMoment = await funmomentService.create(formData);
       // console.log("SUCCESS", newFunMoment);
       navigate('/funmoments');
