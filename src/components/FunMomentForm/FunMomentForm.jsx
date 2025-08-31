@@ -20,14 +20,14 @@ const FunMomentForm = (props) => {
   };
 
   //New addtl handle function here...
-  const handleAddFunMoment = async () => {
-    try {
-      const newFunMoment = await funmomentService.create(formData);
-      console.log("SUCCESS", newFunMoment);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //   const handleAddFunMoment = async () => {
+  //     try {
+  //       const newFunMoment = await funmomentService.create(formData);
+  //       console.log("SUCCESS", newFunMoment);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
 
   //handleSubmit function
   const handleSubmit = async (evt) => {
