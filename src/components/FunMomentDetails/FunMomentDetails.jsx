@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import { useParams, Link } from "react-router";
+import { useParams } from "react-router";
 import CommentForm from "../CommentForm/CommentForm";
 import * as funmomentService from "../../services/funmomentService";
 
@@ -65,7 +65,6 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
           {/* This is where I will create delete functionality for the funmoment. */}
           {funmoment.author._id === user._id && (
             <>
-            <Link to={`/funmoments/${funmomentId}/edit`}>Edit</Link>
             
             <button onClick={deleteFunMoment}>Delete</button>
             </>

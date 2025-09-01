@@ -82,7 +82,8 @@ const App = () => {
         <Route path="funmoments" element={<FunMomentList funmoments={funmoments} />} />
         <Route path="/funmoments/:id" element={<FunMomentDetails handleDeleteFunMoment={handleDeleteFunMoment} />} />
         <Route path="/funmoments/new" element={<FunMomentForm handleAddFunMoment={handleAddFunMoment} />} />
-        <Route path="/funmoments/:id/edit" element={<FunMomentForm />} />
+        {/* Commenting out below route until I can figure out the bug I have with my updating code */}
+        {/* <Route path="/funmoments/:id/edit" element={<FunMomentForm />} /> */}
       </Routes>
     </>
   );

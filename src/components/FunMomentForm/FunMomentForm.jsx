@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { useParams } from 'react-router';
+// import { useParams } from 'react-router';
 import * as funmomentService from '../../services/funmomentService';
 // import * as funmomentService from "../../services/funmomentService"; //changed and moved this to App.jsx previously
 
@@ -12,23 +12,24 @@ import * as funmomentService from '../../services/funmomentService';
 
 const FunMomentForm = ({handleAddFunMoment}) => {
   // Destructure funmomentId from the useParams hook, and console log it
-  const { funmomentId } = useParams();
-  console.log(funmomentId);
+  // const { funmomentId } = useParams();
+  // console.log(funmomentId);
   const [formData, setFormData] = useState({
     title: "",
     text: "",
     category: "Trick Plays",
   });
 
-  useEffect(() => {
-    const fetchFunMoment = async () => {
-    const funmomentData = await funmomentService.show(funmomentId);
-    setFormData(funmomentData);
-    };
-    if (funmomentId) fetchFunMoment();
-    // Add a cleanup function
-    return () => setFormData({ title: '', text: '', category: 'News' });
-  }, [funmomentId]);
+  // Commenting out useEffect for updating until I find the bug
+  // useEffect(() => {
+  //   const fetchFunMoment = async () => {
+  //   const funmomentData = await funmomentService.show(funmomentId);
+  //   setFormData(funmomentData);
+  //   };
+  //   if (funmomentId) fetchFunMoment();
+  //   // Add a cleanup function
+  //   return () => setFormData({ title: '', text: '', category: 'Trick Plays' });
+  // }, [funmomentId]);
 
   //handleChange function
   const handleChange = (evt) => {
@@ -56,7 +57,7 @@ const FunMomentForm = ({handleAddFunMoment}) => {
     <main>
       {/* Adding a heading */}
       {/* Check the Edit Fun Moment & New Fun Moment functionality. */}
-      <h1>{funmomentId ? 'Edit Fun Moment' : '*Edit* Fun Moment'}</h1>
+      {/* <h1>{funmomentId ? 'Edit Fun Moment' : '*Edit* Fun Moment'}</h1> */}
       <form onSubmit={handleSubmit}>
         <label htmlFor="title-input">Title</label>
         <input
