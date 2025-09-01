@@ -82,6 +82,7 @@ const App = () => {
         <Route path="funmoments" element={<FunMomentList funmoments={funmoments} />} />
         <Route path="/funmoments/:id" element={<FunMomentDetails handleDeleteFunMoment={handleDeleteFunMoment} />} />
         <Route path="/funmoments/new" element={<FunMomentForm handleAddFunMoment={handleAddFunMoment} />} />
+        <Route path="/funmoments/:id/edit" element={<FunMomentForm />} />
       </Routes>
     </>
   );
