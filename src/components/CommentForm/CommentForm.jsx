@@ -1,4 +1,3 @@
-// src/components/CommentForm/CommentForm.jsx
 
 import { useState } from 'react';
 

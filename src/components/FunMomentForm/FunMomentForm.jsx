@@ -1,5 +1,8 @@
-import { useState } from "react";
-// import * as funmomentService from "../../services/funmomentService"; //changed and moved this to App.jsx
+
+import { useState, useEffect } from "react";
+import { useParams } from 'react-router';
+import * as funmomentService from '../../services/funmomentService';
+// import * as funmomentService from "../../services/funmomentService"; //changed and moved this to App.jsx previously
 
 // When first start the code, using a super simple function to make sure code and route is working to browser.
 // const FunMomentForm = () => {
@@ -8,11 +11,22 @@ import { useState } from "react";
 // export default FunMomentForm;
 
 const FunMomentForm = ({handleAddFunMoment}) => {
+  // Destructure funmomentId from the useParams hook, and console log it
+  const { funmomentId } = useParams();
+  console.log(funmomentId);
   const [formData, setFormData] = useState({
     title: "",
     text: "",
     category: "Trick Plays",
   });
+
+  useEffect(() => {
+    const fetchFunMoment = async () => {
+    const funmomentData = await funmomentService.show(funmomentId);
+    setFormData(funmomentData);
+    };
+    if (funmomentId) fetchFunMoment();
+  }, [funmomentId]);
 
   //handleChange function
   const handleChange = (evt) => {
@@ -38,6 +52,9 @@ const FunMomentForm = ({handleAddFunMoment}) => {
 
   return (
     <main>
+      {/* Adding a heading */}
+      {/* Check the Edit Fun Moment & New Fun Moment functionality. */}
+      <h1>{funmomentId ? 'Edit Fun Moment' : '*Edit* Fun Moment'}</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="title-input">Title</label>
         <input
