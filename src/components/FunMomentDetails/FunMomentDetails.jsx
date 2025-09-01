@@ -5,7 +5,7 @@ import * as funmomentService from "../../services/funmomentService";
 
 import { UserContext } from "../../contexts/UserContext";
 
-const FunMomentDetails = () => {
+const FunMomentDetails = ({ handleDeleteFunMoment }) => {
   // Setting up the useContext & UserContext here:
   const { user } = useContext(UserContext);
 
@@ -32,18 +32,15 @@ const FunMomentDetails = () => {
   }, [funmomentId]);
 
   const handleAddComment = async (commentFormData) => {
-    const newComment = await funmomentService.createComment(
-      funmomentId,
-      commentFormData
-    );
-
+    const newComment = await funmomentService.createComment(funmomentId, commentFormData);
     // the spread funmoment, updating the comments with the existing ones, and then the new one
     // Spreading in the original funmoment, taking the comments on the funmoment, spreading the original comments and adding the newComment.
-    setFunMoment({
-      ...funmoment,
-      comments: [...funmoment.comments, newComment],
-    });
+    setFunMoment({...funmoment, comments: [...funmoment.comments, newComment] });
   };
+
+  const deleteFunMoment = () => {
+    handleDeleteFunMoment(funmomentId);
+  }
 
   // Verifying the funmoment state is set correctly:
   console.log("funmoment state:", funmoment);
@@ -68,7 +65,7 @@ const FunMomentDetails = () => {
           {/* This is where I will create delete functionality for the funmoment. */}
           {funmoment.author._id === user._id && (
             <>
-              <button>Delete</button>
+              <button onClick={deleteFunMoment}>Delete</button>
             </>
           )}
         </header>

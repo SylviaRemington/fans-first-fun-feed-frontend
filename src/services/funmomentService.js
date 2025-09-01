@@ -62,5 +62,15 @@ const createComment = async (funmomentId, comment) => {
   }
 };
 
+const deleteFunMoment = async (funmomentId) => {
+  try {
+    const res = await axios.delete(`${BASE_URL}/${funmomentId}`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+    });
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
 
-export { index, show, create, createComment};
+export { index, show, create, createComment, deleteFunMoment };

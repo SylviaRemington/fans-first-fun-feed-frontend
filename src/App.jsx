@@ -56,8 +56,13 @@ const App = () => {
   //   navigate("/funmoments");
   // };
 
-  const handleDeleteFunMoment = (funmomentId) => {
-    
+  const handleDeleteFunMoment = async (funmomentId) => {
+    try {
+      const deletedFunMoment = await funmomentService.deleteFunMoment(funmomentId);
+      navigate("/funmoments");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
 
@@ -70,11 +75,8 @@ const App = () => {
         <Route path="/sign-in" element={<SignInForm />} />
         {/* Protected Route below /funmoments that is only available if you are signed in as a user. */}
         {/* Need to pass the FunMoments data in into the FunMomentList component. */}
-        <Route
-          path="funmoments"
-          element={<FunMomentList funmoments={funmoments} />}
-        />
-        <Route path="/funmoments/:id" element={<FunMomentDetails />} />
+        <Route path="funmoments" element={<FunMomentList funmoments={funmoments} />} />
+        <Route path="/funmoments/:id" element={<FunMomentDetails handleDeleteFunMoment={handleDeleteFunMoment} />} />
         <Route path="/funmoments/new" element={<FunMomentForm handleAddFunMoment={handleAddFunMoment} />} />
       </Routes>
     </>
