@@ -70,8 +70,8 @@ button:focus-visible {
 /* New CSS that is not react generated */
 body {
   font-family: Arial, sans-serif;
-  color: #212121; /* Dark gray for readable text */
-  background-color: #e0f7fa; /* Light blue background */
+  color:#FFFFFF; /* #3C414F #212121 Dark gray for readable text */
+  background-color: #1A2649 ; /* #e0f7fa Light blue background */
   margin: 0;
   padding: 0;
 }
@@ -90,7 +90,7 @@ nav ul {
   gap: 1.5rem;
   list-style: none;
   padding: 1rem;
-  background-color: #fdd835; /* Lighter yellow for nav bar */
+  background-color:#ffd700; /* #fdd835 Lighter yellow for nav bar */
   margin: 0;
   justify-content: center;
 }
