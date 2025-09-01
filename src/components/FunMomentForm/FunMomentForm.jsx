@@ -1,7 +1,6 @@
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 // import { useParams } from 'react-router';
-import * as funmomentService from '../../services/funmomentService';
 // import * as funmomentService from "../../services/funmomentService"; //changed and moved this to App.jsx previously
 
 // When first start the code, using a super simple function to make sure code and route is working to browser.
