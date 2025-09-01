@@ -26,6 +26,8 @@ const FunMomentForm = ({handleAddFunMoment}) => {
     setFormData(funmomentData);
     };
     if (funmomentId) fetchFunMoment();
+    // Add a cleanup function
+    return () => setFormData({ title: '', text: '', category: 'News' });
   }, [funmomentId]);
 
   //handleChange function
