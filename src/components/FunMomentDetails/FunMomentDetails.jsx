@@ -66,20 +66,21 @@ const FunMomentDetails = () => {
           </p>
           {/* Currently just working on delete functionality of comments. */}
           {/* This is where I will create delete functionality for the funmoment. */}
-          {/* ! */}
-          {/* {funmoment.author._id === user._id && (
+          {funmoment.author._id === user._id && (
             <>
               <button>Delete</button>
             </>
-          )} */}
+          )}
         </header>
         <p>{funmoment.text}</p>
       </section>
+
 
       {/* Originally just had this basic comments section. */}
       {/* <section>
         <h2>Comments</h2>
       </section> */}
+
 
       {/* Updated comments section */}
       <section>

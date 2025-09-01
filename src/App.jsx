@@ -37,7 +37,7 @@ const App = () => {
     if (user) fetchAllFunMoments();
   }, [user]);
 
-  //handle function
+  //Handle function
   // My handleAddFunMoment needs to accept formData.
   const handleAddFunMoment = async (formData) => {
     try {
@@ -50,12 +50,16 @@ const App = () => {
       console.log(error);
     }
   };
-
   // Addtl handle function (version from class if I'd like to use that instead)
   // const handleAddFunMoment = async (funmomentFormData) => {
   //   console.log("funmomentFormData", funmomentFormData);
   //   navigate("/funmoments");
   // };
+
+  const handleDeleteFunMoment = (funmomentId) => {
+    
+  };
+
 
   return (
     <>
