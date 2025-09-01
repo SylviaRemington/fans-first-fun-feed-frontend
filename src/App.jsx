@@ -56,10 +56,14 @@ const App = () => {
   //   navigate("/funmoments");
   // };
 
+  // Delete FunMoment function
   const handleDeleteFunMoment = async (funmomentId) => {
     try {
       const deletedFunMoment = await funmomentService.deleteFunMoment(funmomentId);
+      console.log(deletedFunMoment);
       navigate("/funmoments");
+      const updatedFunMoments = funmoments.filter((funmoment) => funmoment._id !== funmomentId);
+      setFunMoments(updatedFunMoments);
     } catch (error) {
       console.log(error);
     }
