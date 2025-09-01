@@ -102,11 +102,11 @@ nav a {
 }
 
 nav a:hover {
-  color: ##ffffff; /* Vibrant green on hover */
+  color: #1e88e5; /* blue on hover */
 }
 
 article {
-  border: 2px solid #1e88e5; /* Vibrant blue border */
+  border: 2px solid #1e88e5; /* blue border */
   padding: 1rem;
   margin: 1rem 0;
   background-color: #ffffff; /* White background for posts */
@@ -117,7 +117,7 @@ article {
 
 h1 {
   font-size: 2rem;
-  color: #1e88e5; /* Vibrant blue for headings */
+  color: #1e88e5; /* blue for headings */
 }
 
 h2 {
