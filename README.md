@@ -63,3 +63,92 @@ To demonstrate JWT Authentication, my Express application will use verifyToken t
 Component hierarchy diagram
 
 (Notice how most of my components will require a client-side route. This is because I will treat these components as distinct pages in my app. Components not marked as requiring a route will be used as subcomponents making up the UI of a page.)
+
+
+-------------------------------------------------------------------------------------
+
+ADDTL INFO I HAD IN BACKEND THAT I MIGHT USE HERE:
+
+### About Express API JWT Auth Template:
+My Express API will make use of the Express API JWT Auth Template. This template provides this Express application with pre configured JWT Authentication. This style of authentication in HTTP uses tokens, or unique identifier strings, to tell who a user is when they’re making an authenticated request.
+
+Thanks to this template, this Express application will already be able to sign up and sign in users. The template also includes a verifyToken middleware function. The verifyToken middleware ensures that any route following it in the middleware pipeline will require authentication before proceeding.
+
+To demonstrate JWT Authentication, my Express application will use verifyToken to protect all routes related to the hoot resource. This means users will be required to sign in before getting access to any Fans First Fun Feed data.
+
+<hr>
+
+## Utilizing Express JWT Auth Template 
+### --As per class suggestion for more ease creating backend api--
+
+## About
+
+This repo is an Express JWT Auth template meant to be paired with a front-end app utilizing JWT tokens.
+
+## Getting started
+
+Fork and clone this repository to your local machine.
+
+After moving into the cloned directory, run `npm i` to download the dependencies.
+
+Create a `.env` file in the root of the project:
+
+```bash
+touch .env
+```
+
+and add your MongoDB URI and a secret JWT string to it. Your MongoDB URI will look something like the first entry, but with your username and password:
+
+```plaintext
+MONGODB_URI=mongodb+srv://<username>:<password>@sei.azure.mongodb.net/myApp?retryWrites=true
+JWT_SECRET=supersecret
+```
+
+Start the app in your terminal with:
+
+``` sh
+npm run dev
+```
+
+
+### About Express API JWT Auth Template:
+My Express API will make use of the Express API JWT Auth Template. This template provides this Express application with pre configured JWT Authentication. This style of authentication in HTTP uses tokens, or unique identifier strings, to tell who a user is when they’re making an authenticated request.
+
+Thanks to this template, this Express application will already be able to sign up and sign in users. The template also includes a verifyToken middleware function. The verifyToken middleware ensures that any route following it in the middleware pipeline will require authentication before proceeding.
+
+To demonstrate JWT Authentication, my Express application will use verifyToken to protect all routes related to the hoot resource. This means users will be required to sign in before getting access to any Fans First Fun Feed data.
+
+
+<hr>
+
+## Utilizing Express JWT Auth Template 
+### --As per class suggestion for more ease creating backend api--
+
+## About
+
+This repo is an Express JWT Auth template meant to be paired with a front-end app utilizing JWT tokens.
+
+## Getting started
+
+Fork and clone this repository to your local machine.
+
+After moving into the cloned directory, run `npm i` to download the dependencies.
+
+Create a `.env` file in the root of the project:
+
+```bash
+touch .env
+```
+
+and add your MongoDB URI and a secret JWT string to it. Your MongoDB URI will look something like the first entry, but with your username and password:
+
+```plaintext
+MONGODB_URI=mongodb+srv://<username>:<password>@sei.azure.mongodb.net/myApp?retryWrites=true
+JWT_SECRET=supersecret
+```
+
+Start the app in your terminal with:
+
+``` sh
+npm run dev
+```
