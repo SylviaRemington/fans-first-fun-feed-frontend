@@ -1,6 +1,6 @@
 # Fans First Fun Feed (FRONTEND)
 
-**LINK TO BACK END GITHUB REPO:** https://github.com/SylviaRemington/fans-first-fun-feed-backend
+**LINK TO BACKEND GITHUB REPO:** https://github.com/SylviaRemington/fans-first-fun-feed-backend
 
 ![FansFirstBlue](./public/images/smallerFansFirst.png) <br>
 
