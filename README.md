@@ -1,4 +1,4 @@
-# Fans First Fun Feed --- FRONTEND
+# Fans First Fun Feed -- FRONTEND
 
 **LINK TO BACK END GITHUB REPO:** https://github.com/SylviaRemington/fans-first-fun-feed-backend
 
