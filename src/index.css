@@ -76,6 +76,11 @@ body {
   padding: 0;
 }
 
+.welcome-text {
+  color: #1e88e5; 
+  font-weight: bold;
+}
+
 main {
   display: flex;
   flex-direction: column;

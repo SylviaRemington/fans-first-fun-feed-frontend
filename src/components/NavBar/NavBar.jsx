@@ -15,7 +15,7 @@ const NavBar = () => {
     <nav>
       {user ? (
         <ul>
-          <li>Welcome, {user.username}</li>
+          <li className="welcome-text">Welcome, {user.username}</li>
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/funmoments'>Fun Moments</Link></li>
           <li><Link to='/funmoments/new'>Create A New Fun Moment!</Link></li>
