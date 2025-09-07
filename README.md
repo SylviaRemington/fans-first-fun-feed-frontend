@@ -20,14 +20,17 @@ This app will, most likely, be simplified a lot; and start out as a way for fans
 In this, I’ll build an Express API that serves as the BACKEND for a full-stack "moment-sharing" application called Fans First Fun Feed. Within this Express API, I’ll implement full CRUD functionality and test it with Postman.
 
 ### Addtl Sections:
-- Inspiration -- inspiration and thoughts behind creating this app.
+- **Description of app and functionality**
+- **Inspiration** -- inspiration and thoughts behind creating this app / background info about the app & why I built it.
+- **Getting started** -- a link to my planning materials or info about it & a link to my backend
 - Features -- eg sign in / registerr to your own account, view funmoments, create funmoments, update funmoments, delete funmoments, and be able to comment on funmoments
-- Tech
+- **Tech / Technologies Used**
+- **Attributions** -- includes any external resources such as libraries or assets - but can leave this out if not applicable.
 - Rough Drafts & beginning version of projects
 - Wireframes -- showing screenshot of frontend and backend vscode folders
 - Tree -- showing screenshot of frontend and backend tree
-- Future Enhancements
-- Stretch Goals
+- **Next Steps/Future Enhancements**
+- **Stretch Goals**
 
 ### About Express API JWT Auth Template:
 My Express API will make use of the Express API JWT Auth Template. This template provides this Express application with pre configured JWT Authentication. This style of authentication in HTTP uses tokens, or unique identifier strings, to tell who a user is when they’re making an authenticated request.
