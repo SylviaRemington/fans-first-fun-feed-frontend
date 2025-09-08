@@ -149,6 +149,10 @@ label {
   color: #ffffff;
 }
 
+.comment-box {
+  color: #212121; 
+}
+
 input, textarea, select {
   padding: 0.5rem;
   border: 1px solid #1e88e5;
@@ -156,10 +160,6 @@ input, textarea, select {
   font-size: 1rem;
 }
 
-.comment-box {
-  color: #212121; 
-  background-color: #ffffff;
-}
 
 button {
   background-color: #ffd700; /* Lighter yellow buttons */
@@ -171,6 +171,7 @@ button {
   cursor: pointer;
 }
 
+/* Button for sign-in */
 button:hover {
   background-color: #2e7d32; /* Vibrant green on hover */
   color: #ffffff;
