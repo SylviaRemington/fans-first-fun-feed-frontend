@@ -20,6 +20,7 @@ const CommentForm = ({ handleAddComment }) => {
     <form onSubmit={handleSubmit}>
       <label htmlFor='text-input'>Your comment:</label>
       <textarea
+        className="comment-box" 
         required
         type='text'
         name='text'

@@ -70,7 +70,7 @@ button:focus-visible {
 /* New CSS that is not react generated */
 body {
   font-family: Arial, sans-serif;
-  color:#6ca6d9; /* #3C414F #212121 Dark gray for readable text */
+  color:#e3eaef; /* #3C414F #212121 Dark gray for readable text */
   background-color: #1A2649 ; /* #e0f7fa Light blue background */
   margin: 0;
   padding: 0;
@@ -156,6 +156,11 @@ input, textarea, select {
   font-size: 1rem;
 }
 
+.comment-box {
+  color: #212121; 
+  background-color: #ffffff;
+}
+
 button {
   background-color: #ffd700; /* Lighter yellow buttons */
   color: #1A2649;
@@ -175,4 +180,3 @@ img {
   max-width: 100px;
   margin: 1rem 0;
 }
-
