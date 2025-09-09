@@ -1,6 +1,5 @@
-
 import { useState, useEffect } from "react";
-import { useParams, Link } from 'react-router';
+import { useParams, Link } from "react-router";
 import * as funmomentService from "../../services/funmomentService"; //changed and moved this to App.jsx previously
 
 // When first start the code, using a super simple function to make sure code and route is working to browser.
@@ -9,7 +8,8 @@ import * as funmomentService from "../../services/funmomentService"; //changed a
 // }
 // export default FunMomentForm;
 
-const FunMomentForm = ({handleAddFunMoment, handleUpdateFunMoment, funmoments}) => {
+const FunMomentForm = ({
+  handleAddFunMoment, handleUpdateFunMoment, funmoments,}) => {
   // Destructure funmomentId from the useParams hook, and console log it
   // const { funmomentId } = useParams();
   // console.log(funmomentId);
@@ -34,38 +34,11 @@ const FunMomentForm = ({handleAddFunMoment, handleUpdateFunMoment, funmoments}) 
     }
   }, [id, funmoments]);
 
-  // Commenting out useEffect for updating until I find the bug
-  // useEffect(() => {
-  //   const fetchFunMoment = async () => {
-  //   const funmomentData = await funmomentService.show(funmomentId);
-  //   setFormData(funmomentData);
-  //   };
-  //   if (funmomentId) fetchFunMoment();
-  //   // Add a cleanup function
-  //   return () => setFormData({ title: '', text: '', category: 'Trick Plays' });
-  // }, [funmomentId]);
-
   //handleChange function
   const handleChange = (evt) => {
     setFormData({ ...formData, [evt.target.name]: evt.target.value });
   };
 
-  //New addtl handle function here...
-  //   const handleAddFunMoment = async (formData) => {
-  //     try {
-  //       const newFunMoment = await funmomentService.create(formData);
-  //       console.log("SUCCESS", newFunMoment);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-
-  //handleSubmit function
-  // const handleSubmit = async (evt) => {
-  //   evt.preventDefault();
-  //   console.log("formData", formData);
-  //   handleAddFunMoment(formData);
-  // };
   const handleSubmit = async (evt) => {
     evt.preventDefault();
     console.log("formData", formData);
@@ -76,13 +49,12 @@ const FunMomentForm = ({handleAddFunMoment, handleUpdateFunMoment, funmoments}) 
     }
   };
 
-
-
   return (
     <main>
       {/* Adding a heading */}
       {/* Check the Edit Fun Moment & New Fun Moment functionality. */}
       {/* <h1>{funmomentId ? 'Edit Fun Moment' : '*Edit* Fun Moment'}</h1> */}
+      <h1>{id ? "Edit Fun Moment" : "New Fun Moment"}</h1>
       <form onSubmit={handleSubmit}>
         <label htmlFor="title-input">Title</label>
         <input
@@ -130,3 +102,35 @@ const FunMomentForm = ({handleAddFunMoment, handleUpdateFunMoment, funmoments}) 
 };
 
 export default FunMomentForm;
+
+//------------------------------------------------------------------------------------
+
+// Commented out code that I might revisit later - keep to make sure I didn't take anything out I shouldn't have
+
+// Commenting out useEffect for updating until I find the bug
+// useEffect(() => {
+//   const fetchFunMoment = async () => {
+//   const funmomentData = await funmomentService.show(funmomentId);
+//   setFormData(funmomentData);
+//   };
+//   if (funmomentId) fetchFunMoment();
+// Add a cleanup function
+//   return () => setFormData({ title: '', text: '', category: 'Trick Plays' });
+// }, [funmomentId]);
+
+//New addtl handle function here...
+//   const handleAddFunMoment = async (formData) => {
+//     try {
+//       const newFunMoment = await funmomentService.create(formData);
+//       console.log("SUCCESS", newFunMoment);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
+
+//handleSubmit function
+// const handleSubmit = async (evt) => {
+//   evt.preventDefault();
+//   console.log("formData", formData);
+//   handleAddFunMoment(formData);
+// };
