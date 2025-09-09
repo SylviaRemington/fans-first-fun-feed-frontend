@@ -157,6 +157,10 @@ label {
   color: #000000; /* Darker black for better contrast on yellow (~14.5:1 ratio, passes AA/AAA) */
 }
 
+.comment-author-date {
+  color: #000000; /* Dark black for 14.5:1 contrast on yellow background (passes WCAG AA/AAA) */
+}
+
 input, textarea, select {
   padding: 0.5rem;
   border: 1px solid #1e88e5;

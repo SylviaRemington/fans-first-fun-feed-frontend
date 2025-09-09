@@ -107,7 +107,7 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
         {funmoment.comments.map((comment) => (
           <article key={comment._id}>
             <header>
-              <p>
+              <p className="comment-author-date">
                 {`${comment.author.username} posted on
                 ${new Date(comment.createdAt).toLocaleDateString()}`}
               </p>
