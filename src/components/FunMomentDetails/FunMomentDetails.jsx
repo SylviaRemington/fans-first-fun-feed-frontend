@@ -113,7 +113,7 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
               </p>
               {comment.author._id === user._id && (
                 <>
-                  <button>Delete</button>
+                  <button className="comment-delete-button">Delete</button>
                 </>
               )}
             </header>

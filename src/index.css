@@ -90,6 +90,7 @@ main {
   min-height: 100vh;
 }
 
+
 nav ul {
   display: flex;
   gap: 1.5rem;
@@ -177,6 +178,14 @@ button {
   border-radius: 4px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.comment-delete-button {
+  border: 1px solid #1A2649; /* Blue outline around the button (1px thick, solid line) */
+  background-color: #ffd700; /* Keep yellow background */
+  color: #1A2649; /* Keep dark text */
+  padding: 0.5rem 1rem; /* Adjust padding if needed for size */
+  border-radius: 4px;
 }
 
 article a.button {
