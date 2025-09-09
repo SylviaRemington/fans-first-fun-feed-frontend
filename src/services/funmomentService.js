@@ -24,7 +24,7 @@ const index = async () => {
 };
 
 
-// show function
+// Show function
 const show = async (funmomentId) => {
   try {
     const res = await axios.get(`${BASE_URL}/${funmomentId}`, {
@@ -37,8 +37,9 @@ const show = async (funmomentId) => {
   }
 };
 
-// THIS CREATES THE FUNMOMENT. --caps so differentiate the two
-// create function for creating
+
+// This creates the funmoment. 
+// Create function for creating
 const create = async (formData) => {
   try {
     const res = await axios.post(BASE_URL, formData, {
@@ -50,8 +51,9 @@ const create = async (formData) => {
   }
 };
 
-// THIS CREATES THE COMMENT. --caps so differentiate the two
-// create comment function for comment section
+
+// This creates the comment. 
+// Create comment function for comment section
 const createComment = async (funmomentId, comment) => {
   try {
     const res = await axios.post(`${BASE_URL}/${funmomentId}/comments`, comment, {
@@ -63,6 +65,19 @@ const createComment = async (funmomentId, comment) => {
   }
 };
 
+// Update the comment
+const updateComment = async (funmomentId, commentId, commentData) => {
+  try {
+    const res = await axios.put(`${BASE_URL}/${funmomentId}/comments/${commentId}`, commentData, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+    });
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+// Delete FunMoment
 const deleteFunMoment = async (funmomentId) => {
   try {
     const res = await axios.delete(`${BASE_URL}/${funmomentId}`, {
@@ -75,7 +90,7 @@ const deleteFunMoment = async (funmomentId) => {
 };
 
 
-// Update functionality
+// Update FunMoment
 const update = async (funmomentId, formData) => {
   try {
     const res = await axios.put(`${BASE_URL}/${funmomentId}`, formData, {
@@ -87,4 +102,4 @@ const update = async (funmomentId, formData) => {
   }
 };
 
-export { index, show, create, createComment, deleteFunMoment, update };
+export { index, show, create, createComment, deleteFunMoment, update, updateComment };
