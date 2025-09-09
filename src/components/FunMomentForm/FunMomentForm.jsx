@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router";
+import { useParams } from "react-router";
+// eslint-disable-next-line no-unused-vars
 import * as funmomentService from "../../services/funmomentService"; //changed and moved this to App.jsx previously
 
 // When first start the code, using a super simple function to make sure code and route is working to browser.

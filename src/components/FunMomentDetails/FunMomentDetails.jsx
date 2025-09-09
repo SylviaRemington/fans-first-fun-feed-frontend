@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import { useParams, Link } from "react-router";
+import { useParams, useNavigate } from "react-router";
 import CommentForm from "../CommentForm/CommentForm";
 import * as funmomentService from "../../services/funmomentService";
 
@@ -8,6 +8,7 @@ import { UserContext } from "../../contexts/UserContext";
 const FunMomentDetails = ({ handleDeleteFunMoment }) => {
   // Setting up the useContext & UserContext here:
   const { user } = useContext(UserContext);
+  const navigate = useNavigate();
 
   // Original Version:
   // const params = useParams();
@@ -45,6 +46,10 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
     handleDeleteFunMoment(id);
   }
 
+  const editFunMoment = () => {
+  navigate(`/funmoments/${id}/edit`);
+}
+
   // Verifying the funmoment state is set correctly:
   console.log("funmoment state:", funmoment);
 
@@ -69,7 +74,7 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
           {funmoment.author._id === user._id && (
             <>
             {/* <Link to={`/funmoments/${id}/edit`}>Edit</Link> */}
-            <Link to={`/funmoments/${id}/edit`} className="button">Edit</Link>
+            <button onClick={editFunMoment}>Edit</button>
             <button onClick={deleteFunMoment}>Delete</button>
             </>
           )}
