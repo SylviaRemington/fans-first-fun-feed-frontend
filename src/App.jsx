@@ -80,6 +80,19 @@ const App = () => {
     }
   };
 
+  // Updating Functionality for Comment Section
+  const handleUpdateComment = async (funmomentId, commentId, commentData) => {
+  try {
+    const updatedComment = await funmomentService.updateComment(funmomentId, commentId, commentData);
+    // Update the funmoments state to reflect the change (find the funmoment and update its comments)
+    setFunMoments(funmoments.map(fm => fm._id === funmomentId 
+      ? { ...fm, comments: fm.comments.map(c => c._id === commentId ? updatedComment : c) }
+      : fm));
+    navigate(`/funmoments/${funmomentId}`); // Redirect to details
+  } catch (error) {
+    console.log(error);
+  }
+};
 
   return (
     <>
@@ -91,7 +104,7 @@ const App = () => {
         {/* Protected Route below /funmoments that is only available if you are signed in as a user. */}
         {/* Need to pass the FunMoments data in into the FunMomentList component. */}
         <Route path="funmoments" element={<FunMomentList funmoments={funmoments} />} />
-        <Route path="/funmoments/:id" element={<FunMomentDetails handleDeleteFunMoment={handleDeleteFunMoment} />} />
+        <Route path="/funmoments/:id" element={<FunMomentDetails handleDeleteFunMoment={handleDeleteFunMoment} handleUpdateComment={handleUpdateComment} />} />
         <Route path="/funmoments/new" element={<FunMomentForm handleAddFunMoment={handleAddFunMoment} />} />
         {/* Commenting out below route until I can figure out the bug I have with my updating code */}
         {/* <Route path="/funmoments/:id/edit" element={<FunMomentForm />} /> */}
