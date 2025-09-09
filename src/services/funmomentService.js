@@ -74,4 +74,15 @@ const deleteFunMoment = async (funmomentId) => {
   }
 };
 
-export { index, show, create, createComment, deleteFunMoment };
+const update = async (funmomentId, formData) => {
+  try {
+    const res = await axios.put(`${BASE_URL}/${funmomentId}`, formData, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+    });
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+export { index, show, create, createComment, deleteFunMoment, update };
