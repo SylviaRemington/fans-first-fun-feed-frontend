@@ -68,7 +68,8 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
           {/* This is where I will create delete functionality for the funmoment. */}
           {funmoment.author._id === user._id && (
             <>
-            <Link to={`/funmoments/${id}/edit`}>Edit</Link>
+            {/* <Link to={`/funmoments/${id}/edit`}>Edit</Link> */}
+            <Link to={`/funmoments/${id}/edit`} className="button">Edit</Link>
             <button onClick={deleteFunMoment}>Delete</button>
             </>
           )}

@@ -171,9 +171,25 @@ button {
   cursor: pointer;
 }
 
+article a.button {
+  background-color: #ffd700;
+  color: #1A2649;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 /* Button for sign-in */
 button:hover {
   background-color: #2e7d32; /* Vibrant green on hover */
+  color: #ffffff;
+}
+
+article a.button:hover {
+  background-color: #2e7d32;
   color: #ffffff;
 }
 
