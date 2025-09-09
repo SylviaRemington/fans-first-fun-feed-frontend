@@ -1,5 +1,5 @@
 import { useEffect, useState, useContext } from "react";
-import { useParams } from "react-router";
+import { useParams, Link } from "react-router";
 import CommentForm from "../CommentForm/CommentForm";
 import * as funmomentService from "../../services/funmomentService";
 
@@ -10,12 +10,14 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
   const { user } = useContext(UserContext);
 
   // Original Version:
-  const params = useParams();
-  console.log(params.id);
+  // const params = useParams();
+  // console.log(params.id);
+
+  const { id } = useParams();
 
   // The 'funmoment' in the state is what I'll be using in my return:
   const [funmoment, setFunMoment] = useState(null);
-  const funmomentId = params.id;
+  // const funmomentId = params.id;
 
   // Addtl Version
   // const { id } = useParams;
@@ -24,22 +26,23 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
   useEffect(() => {
     // Setting up our data fetching function & call the show function with that id (because the funmomentService needs the id for the show function)
     const getData = async () => {
-      const funmomentToShow = await funmomentService.show(funmomentId); //!check this id part to make sure I don't need funmomentId instead. Was originally params.id & I changed it; but not sure if it should have been params.funmomentId.
+      // const funmomentToShow = await funmomentService.show(funmomentId); //!check this id part to make sure I don't need funmomentId instead. Was originally params.id & I changed it; but not sure if it should have been params.funmomentId.
+      const funmomentToShow = await funmomentService.show(id);
       console.log(funmomentToShow);
       setFunMoment(funmomentToShow);
     };
     getData();
-  }, [funmomentId]);
+  }, [id]);
 
   const handleAddComment = async (commentFormData) => {
-    const newComment = await funmomentService.createComment(funmomentId, commentFormData);
+    const newComment = await funmomentService.createComment(id, commentFormData);
     // the spread funmoment, updating the comments with the existing ones, and then the new one
     // Spreading in the original funmoment, taking the comments on the funmoment, spreading the original comments and adding the newComment.
     setFunMoment({...funmoment, comments: [...funmoment.comments, newComment] });
   };
 
   const deleteFunMoment = () => {
-    handleDeleteFunMoment(funmomentId);
+    handleDeleteFunMoment(id);
   }
 
   // Verifying the funmoment state is set correctly:
@@ -65,7 +68,7 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
           {/* This is where I will create delete functionality for the funmoment. */}
           {funmoment.author._id === user._id && (
             <>
-            
+            <Link to={`/funmoments/${id}/edit`}>Edit</Link>
             <button onClick={deleteFunMoment}>Delete</button>
             </>
           )}
