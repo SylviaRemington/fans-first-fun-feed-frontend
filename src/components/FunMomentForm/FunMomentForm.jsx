@@ -1,7 +1,7 @@
 
-import { useState } from "react";
-// import { useParams } from 'react-router';
-// import * as funmomentService from "../../services/funmomentService"; //changed and moved this to App.jsx previously
+import { useState, useEffect } from "react";
+import { useParams, Link } from 'react-router';
+import * as funmomentService from "../../services/funmomentService"; //changed and moved this to App.jsx previously
 
 // When first start the code, using a super simple function to make sure code and route is working to browser.
 // const FunMomentForm = () => {
@@ -9,15 +9,30 @@ import { useState } from "react";
 // }
 // export default FunMomentForm;
 
-const FunMomentForm = ({handleAddFunMoment}) => {
+const FunMomentForm = ({handleAddFunMoment, handleUpdateFunMoment, funmoments}) => {
   // Destructure funmomentId from the useParams hook, and console log it
   // const { funmomentId } = useParams();
   // console.log(funmomentId);
+
+  const { id } = useParams();
   const [formData, setFormData] = useState({
     title: "",
     text: "",
     category: "Trick Plays",
   });
+
+  useEffect(() => {
+    if (id && funmoments) {
+      const funmoment = funmoments.find((fm) => fm._id === id);
+      if (funmoment) {
+        setFormData({
+          title: funmoment.title,
+          text: funmoment.text,
+          category: funmoment.category,
+        });
+      }
+    }
+  }, [id, funmoments]);
 
   // Commenting out useEffect for updating until I find the bug
   // useEffect(() => {
@@ -46,11 +61,22 @@ const FunMomentForm = ({handleAddFunMoment}) => {
   //   };
 
   //handleSubmit function
+  // const handleSubmit = async (evt) => {
+  //   evt.preventDefault();
+  //   console.log("formData", formData);
+  //   handleAddFunMoment(formData);
+  // };
   const handleSubmit = async (evt) => {
     evt.preventDefault();
     console.log("formData", formData);
-    handleAddFunMoment(formData);
+    if (id) {
+      handleUpdateFunMoment(id, formData);
+    } else {
+      handleAddFunMoment(formData);
+    }
   };
+
+
 
   return (
     <main>
