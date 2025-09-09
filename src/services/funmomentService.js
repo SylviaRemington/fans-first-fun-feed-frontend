@@ -74,6 +74,8 @@ const deleteFunMoment = async (funmomentId) => {
   }
 };
 
+
+// Update functionality
 const update = async (funmomentId, formData) => {
   try {
     const res = await axios.put(`${BASE_URL}/${funmomentId}`, formData, {
