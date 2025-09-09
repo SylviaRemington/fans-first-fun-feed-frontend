@@ -56,6 +56,17 @@ const App = () => {
   //   navigate("/funmoments");
   // };
 
+  // Updating FunMoment function
+  const handleUpdateFunMoment = async (funmomentId, formData) => {
+  try {
+    const updatedFunMoment = await funmomentService.update(funmomentId, formData);
+    setFunMoments(funmoments.map((fm) => (fm._id === funmomentId ? updatedFunMoment : fm)));
+    navigate(`/funmoments/${funmomentId}`);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
   // Delete FunMoment function
   const handleDeleteFunMoment = async (funmomentId) => {
     try {
@@ -84,10 +95,12 @@ const App = () => {
         <Route path="/funmoments/new" element={<FunMomentForm handleAddFunMoment={handleAddFunMoment} />} />
         {/* Commenting out below route until I can figure out the bug I have with my updating code */}
         {/* <Route path="/funmoments/:id/edit" element={<FunMomentForm />} /> */}
+        <Route path="/funmoments/:id/edit" element={<FunMomentForm handleUpdateFunMoment={handleUpdateFunMoment} funmoments={funmoments} />} />
       </Routes>
     </>
   );
 };
 
 export default App;
+
 
