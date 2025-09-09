@@ -149,8 +149,12 @@ label {
   color: #ffffff;
 }
 
-.comment-box {
+/* .comment-box {
   color: #212121; 
+} */
+
+.comment-box, .comment-box p {
+  color: #000000; /* Darker black for better contrast on yellow (~14.5:1 ratio, passes AA/AAA) */
 }
 
 input, textarea, select {

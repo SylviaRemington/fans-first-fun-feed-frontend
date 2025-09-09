@@ -117,7 +117,7 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
                 </>
               )}
             </header>
-            <p>{comment.text}</p>
+            <p className="comment-box">{comment.text}</p>
           </article>
         ))}
       </section>
