@@ -6,7 +6,7 @@ const CommentForm = ({ handleAddComment, handleUpdateComment, funmoments }) => {
   const [formData, setFormData] = useState({ text: '' });
   const { funmomentId, commentId } = useParams();
 
-  useEffect(() => { // **NEW**: Pre-fill form for edit
+  useEffect(() => { 
   if (funmoments && funmomentId && commentId) {
     const funmoment = funmoments.find(fm => fm._id === funmomentId);
     if (funmoment) {
