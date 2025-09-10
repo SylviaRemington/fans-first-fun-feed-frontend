@@ -31,6 +31,7 @@ In this, I’ll build an Express API that serves as the BACKEND for a full-stack
 - Tree -- showing screenshot of frontend and backend tree
 - **Next Steps/Future Enhancements**
 - **Stretch Goals**
+- **Finding Out About Cachebust**
 
 ### About Express API JWT Auth Template:
 My Express API will make use of the Express API JWT Auth Template. This template provides this Express application with pre configured JWT Authentication. This style of authentication in HTTP uses tokens, or unique identifier strings, to tell who a user is when they’re making an authenticated request.

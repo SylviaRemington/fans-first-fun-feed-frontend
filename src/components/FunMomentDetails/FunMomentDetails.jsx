@@ -16,7 +16,7 @@ const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment, handleDe
   const [funmoment, setFunMoment] = useState(null);
 
   useEffect(() => {
-    // Setting up our data fetching function & call the show function with that id (because the funmomentService needs the id for the show function)
+    // Setting up data fetching function & call the show function with that id (because the funmomentService needs the id for the show function)
     const getData = async () => {
       const funmomentToShow = await funmomentService.show(id);
       console.log(funmomentToShow);
@@ -41,7 +41,27 @@ const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment, handleDe
   }
 
   const deleteComment = async (commentId) => {
-    await handleDeleteComment(id, commentId);
+    try {
+      console.log('Deleting comment:', id, commentId); // Debug IDs
+      await handleDeleteComment(id, commentId);
+      // Updating local funmoment state to remove the deleted comment
+      setFunMoment({
+        ...funmoment,
+        comments: funmoment.comments.filter((comment) => comment._id !== commentId),
+      });
+    } catch (error) {
+      console.log('Delete comment error:', error); // debugging
+    }
+  };
+
+  const handleEditComment = async (funmomentId, commentId, commentData) => {
+    try {
+      await handleUpdateComment(funmomentId, commentId, commentData);
+      const updatedFunMoment = await funmomentService.show(id, { cacheBust: Date.now() });
+      setFunMoment(updatedFunMoment);
+    } catch (error) {
+      console.log('Edit comment error:', error);
+    }
   };
 
   // Verifying the funmoment state is set correctly:
@@ -76,8 +96,7 @@ const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment, handleDe
 
         {/* Putting CommentForm Here */}
         {/* This is going to call the funmomentService, get the newComment and then will set the new state of the fun moment. */}
-        <CommentForm handleAddComment={handleAddComment} handleUpdateComment={handleUpdateComment} funmoments={funmoments} />
-        {!funmoment.comments.length && (
+        <CommentForm handleAddComment={handleAddComment} handleUpdateComment={handleEditComment} funmoments={funmoments} />        {!funmoment.comments.length && (
           <p>
             There are no comments currently. Be the first to comment! Yuuus.
           </p>
@@ -93,9 +112,7 @@ const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment, handleDe
               {comment.author._id === user._id && (
                 <>
                   {/* Adding edit button for the comments */}
-                  <button onClick={() => navigate(`/funmoments/${id}/comments/${comment._id}/edit`)} className="comment-edit-button">Edit</button>
-
-                  <button onClick={() => deleteComment(comment._id)} className="comment-delete-button">Delete</button>
+                  <button onClick={() => navigate(`/funmoments/${id}/comments/${comment._id}/edit`, { state: { text: comment.text } })} className="comment-edit-button">Edit</button>                  <button onClick={() => deleteComment(comment._id)} className="comment-delete-button">Delete</button>
                 </>
               )}
             </header>

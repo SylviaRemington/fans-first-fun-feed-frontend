@@ -23,18 +23,32 @@ const index = async () => {
 
 
 // Show function
-const show = async (funmomentId) => {
+// First Version
+// const show = async (funmomentId) => {
+//   try {
+//     const res = await axios.get(`${BASE_URL}/${funmomentId}`, {
+//       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+//     });
+//     return res.data;
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// New Show function
+const show = async (funmomentId, options = {}) => {
   try {
     const res = await axios.get(`${BASE_URL}/${funmomentId}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+      params: options.cacheBust ? { _t: options.cacheBust } : {},
+      // adding cacheBust functionality because having cache issues - just learning about this and how to make it work
     });
     return res.data;
   } catch (error) {
     console.log(error);
-    // return [];
+    throw error;
   }
 };
-
 
 // This creates the funmoment. 
 // Create function for creating.
@@ -48,7 +62,6 @@ const create = async (formData) => {
     console.log(error);
   }
 };
-
 
 // This creates the comment. 
 // Create comment function for comment section.
