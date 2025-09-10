@@ -1,5 +1,3 @@
-// path is src/services/funmomentService.js
-
 // Imports
 import axios from "axios";
 
@@ -39,7 +37,7 @@ const show = async (funmomentId) => {
 
 
 // This creates the funmoment. 
-// Create function for creating
+// Create function for creating.
 const create = async (formData) => {
   try {
     const res = await axios.post(BASE_URL, formData, {
@@ -53,7 +51,7 @@ const create = async (formData) => {
 
 
 // This creates the comment. 
-// Create comment function for comment section
+// Create comment function for comment section.
 const createComment = async (funmomentId, comment) => {
   try {
     const res = await axios.post(`${BASE_URL}/${funmomentId}/comments`, comment, {
