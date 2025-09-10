@@ -5,7 +5,7 @@ import * as funmomentService from "../../services/funmomentService";
 
 import { UserContext } from "../../contexts/UserContext";
 
-const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment }) => {
+const FunMomentDetails = ({ handleDeleteFunMoment }) => {
   // Setting up the useContext & UserContext here:
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
@@ -95,7 +95,7 @@ const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment }) => {
 
         {/* Putting CommentForm Here */}
         {/* This is going to call the funmomentService, get the newComment and then will set the new state of the fun moment. */}
-        <CommentForm handleAddComment={handleAddComment} />
+        <CommentForm handleAddComment={(formData) => handleAddComment(formData)} funmomentId={id} />
 
         {/* THIS LINE BELOW I MIGHT TAKE OUT ONCE I'VE FULLY FINISHED THE APP. */}
         {!funmoment.comments.length && (
