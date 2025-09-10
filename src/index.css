@@ -64,6 +64,10 @@ h2 {
   /* #1e88e5; */
 }
 
+.funmoment-title {
+  color: #1e88e5; /* Blue for Fun Moment titles on list page, 5.2:1 contrast on #1A2649 */
+}
+
 p {
   font-size: 1rem;
   line-height: 1.4;
@@ -117,6 +121,14 @@ button {
   color: #1A2649; 
   padding: 0.5rem 1rem; 
   border-radius: 4px;
+}
+
+.comment-edit-button {
+  border: 1px solid #1A2649;
+  background-color: #ffd700; 
+  color: #1A2649; 
+  padding: 0.5rem 1rem; 
+  border-radius: 4px; 
 }
 
 article a.button {

@@ -12,7 +12,7 @@ const FunMomentList = ({ funmoments }) => {
         <Link key={funmoment._id} to={`/funmoments/${funmoment._id}`}>
           <article>
             <header>
-              <h2>{funmoment.title}</h2>
+              <h2 className="funmoment-title">{funmoment.title}</h2>
               <p>
                 {`${funmoment.author.username} posted on
                 ${new Date(funmoment.createdAt).toLocaleDateString()}`}
