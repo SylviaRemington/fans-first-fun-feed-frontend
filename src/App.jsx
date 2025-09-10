@@ -10,6 +10,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import FunMomentList from "./components/FunMomentList/FunMomentList";
 import FunMomentDetails from "./components/FunMomentDetails/FunMomentDetails";
 import FunMomentForm from "./components/FunMomentForm/FunMomentForm";
+import CommentForm from "./components/CommentForm/CommentForm";
 
 import { UserContext } from "./contexts/UserContext";
 
@@ -109,6 +110,7 @@ const App = () => {
         {/* Commenting out below route until I can figure out the bug I have with my updating code */}
         {/* <Route path="/funmoments/:id/edit" element={<FunMomentForm />} /> */}
         <Route path="/funmoments/:id/edit" element={<FunMomentForm handleUpdateFunMoment={handleUpdateFunMoment} funmoments={funmoments} />} />
+        <Route path="/funmoments/:funmomentId/comments/:commentId/edit" element={<CommentForm handleUpdateComment={handleUpdateComment} funmoments={funmoments} />} />
       </Routes>
     </>
   );
