@@ -131,6 +131,12 @@ button {
   border-radius: 4px; 
 }
 
+/* This below didn't fix the css yet */
+button:active, button:focus {
+  color: #1A2649; /* Keeping text color consistent with button default - the browser's default setting are making it turn red */
+  outline: none; /* Removing default focus outline */
+}
+
 article a.button {
   background-color: #ffd700;
   color: #1A2649;
