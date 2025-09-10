@@ -93,7 +93,7 @@ const App = () => {
         {/* Protected Route below /funmoments that is only available if you are signed in as a user. */}
         {/* Need to pass the FunMoments data in into the FunMomentList component. */}
         <Route path="funmoments" element={<FunMomentList funmoments={funmoments} />} />
-        <Route path="/funmoments/:id" element={<FunMomentDetails handleDeleteFunMoment={handleDeleteFunMoment} handleUpdateComment={handleUpdateComment} />} />
+       <Route path="/funmoments/:id" element={<FunMomentDetails handleDeleteFunMoment={handleDeleteFunMoment} handleUpdateComment={handleUpdateComment} funmoments={funmoments} />} />
         <Route path="/funmoments/new" element={<FunMomentForm handleAddFunMoment={handleAddFunMoment} />} />
         <Route path="/funmoments/:id/edit" element={<FunMomentForm handleUpdateFunMoment={handleUpdateFunMoment} funmoments={funmoments} />} />
         <Route path="/funmoments/:funmomentId/comments/:commentId/edit" element={<CommentForm handleUpdateComment={handleUpdateComment} funmoments={funmoments} />} />

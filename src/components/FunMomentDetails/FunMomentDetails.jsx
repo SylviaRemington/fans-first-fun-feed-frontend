@@ -5,7 +5,7 @@ import * as funmomentService from "../../services/funmomentService";
 
 import { UserContext } from "../../contexts/UserContext";
 
-const FunMomentDetails = ({ handleDeleteFunMoment }) => {
+const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment, funmoments }) => {
   // Setting up the useContext & UserContext here:
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
   }, [id]);
 
   const handleAddComment = async (commentFormData) => {
-    const newComment = await funmomentService.createComment(id, commentFormData);
+  const newComment = await funmomentService.createComment(id, commentFormData);
     // the spread funmoment, updating the comments with the existing ones, and then the new one
     // Spreading in the original funmoment, taking the comments on the funmoment, spreading the original comments and adding the newComment.
     setFunMoment({...funmoment, comments: [...funmoment.comments, newComment] });
@@ -55,11 +55,8 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
             {`${funmoment.author.username} posted on
             ${new Date(funmoment.createdAt).toLocaleDateString()}`}
           </p>
-          {/* Currently just working on delete functionality of comments. */}
-          {/* This is where I will create delete functionality for the funmoment. */}
           {funmoment.author._id === user._id && (
             <>
-            {/* <Link to={`/funmoments/${id}/edit`}>Edit</Link> */}
             <button onClick={editFunMoment}>Edit</button>
             <button onClick={deleteFunMoment}>Delete</button>
             </>
@@ -75,8 +72,7 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
 
         {/* Putting CommentForm Here */}
         {/* This is going to call the funmomentService, get the newComment and then will set the new state of the fun moment. */}
-        <CommentForm handleAddComment={(formData) => handleAddComment(formData)} funmomentId={id} />
-
+<CommentForm handleAddComment={handleAddComment} handleUpdateComment={handleUpdateComment} funmoments={funmoments} />
         {!funmoment.comments.length && (
           <p>
             There are no comments currently. Be the first to comment! Yuuus.

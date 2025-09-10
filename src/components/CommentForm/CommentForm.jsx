@@ -22,16 +22,16 @@ const CommentForm = ({ handleAddComment, handleUpdateComment, funmoments }) => {
   };
 
   const handleSubmit = (evt) => {
-    evt.preventDefault();
-    // add handleAddComment
-    // Need to pass in my handleAddComment into my handleSubmit - put prop onto the comment form but originally didn't call the handleAddComment function in handleSubmit.
-    if (funmomentId && commentId && handleUpdateComment) {
-      handleUpdateComment(funmomentId, commentId, formData);
-    } else if (funmomentId) {
-      handleAddComment(funmomentId, formData);
-    }
-    setFormData({ text: "" });
-  };
+  evt.preventDefault();
+  // add handleAddComment
+  // Need to pass in my handleAddComment into my handleSubmit - put prop onto the comment form but originally didn't call the handleAddComment function in handleSubmit.
+  if (funmomentId && commentId && handleUpdateComment) {
+    handleUpdateComment(funmomentId, commentId, formData);
+  } else {
+    handleAddComment(formData);
+  }
+  setFormData({ text: '' });
+};
 
   return (
     <form onSubmit={handleSubmit}>
