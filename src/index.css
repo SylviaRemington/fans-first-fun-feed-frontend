@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  color:#e3eaef; 
+  color:#e3eaef; /* #3C414F #212121 Dark gray for readable text */
   background-color: #1A2649 ; 
   margin: 0;
   padding: 0;
@@ -42,7 +42,8 @@ nav a:hover {
 }
 
 article {
-  border: 2px solid #1e88e5; /* blue border */
+  border: 2px solid #ffd700;
+  /* #1e88e5; blue border */
   padding: 1rem;
   margin: 1rem 0;
   background-color: #ffd700; /* This is Savannah Bananas yellow, but could also use #ffffff White background for posts */
@@ -59,8 +60,8 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  color: white; 
-  /* could use this later #1e88e5; */
+  color: #32cb3a;
+  /* #1e88e5; */
 }
 
 p {
@@ -100,9 +101,8 @@ input, textarea, select {
   font-size: 1rem;
 }
 
-
 button {
-  background-color: #ffd700; /* Lighter yellow buttons */
+  background-color: #ffd700;
   color: #1A2649;
   padding: 0.7rem 1.5rem;
   border: none;
@@ -112,10 +112,10 @@ button {
 }
 
 .comment-delete-button {
-  border: 1px solid #1A2649; /* Blue outline around the button */
+  border: 1px solid #1A2649; /* Blue outline around the button - 1px thick, solid line */
   background-color: #ffd700; 
   color: #1A2649; 
-  padding: 0.5rem 1rem; /* Adjust padding if needed for size */
+  padding: 0.5rem 1rem; 
   border-radius: 4px;
 }
 
@@ -132,12 +132,13 @@ article a.button {
 
 /* Button for sign-in */
 button:hover {
-  background-color: #2e7d32; /* green on hover */
+  background-color: #32cb3a; 
+  /* #2e7d32; Vibrant green on hover */
   color: #ffffff;
 }
 
 article a.button:hover {
-  background-color: #2e7d32;
+  background-color: #32cb3a; 
   color: #ffffff;
 }
 
