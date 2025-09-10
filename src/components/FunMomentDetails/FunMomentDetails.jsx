@@ -5,7 +5,7 @@ import * as funmomentService from "../../services/funmomentService";
 
 import { UserContext } from "../../contexts/UserContext";
 
-const FunMomentDetails = ({ handleDeleteFunMoment }) => {
+const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment }) => {
   // Setting up the useContext & UserContext here:
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
@@ -113,6 +113,9 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
               </p>
               {comment.author._id === user._id && (
                 <>
+                  {/* Adding edit button for the comments */}
+                  <button onClick={() => navigate(`/funmoments/${id}/comments/${comment._id}/edit`)} className="comment-edit-button">Edit</button> 
+
                   <button className="comment-delete-button">Delete</button>
                 </>
               )}

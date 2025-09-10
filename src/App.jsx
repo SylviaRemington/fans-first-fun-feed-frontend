@@ -88,7 +88,7 @@ const App = () => {
     setFunMoments(funmoments.map(fm => fm._id === funmomentId 
       ? { ...fm, comments: fm.comments.map(c => c._id === commentId ? updatedComment : c) }
       : fm));
-    navigate(`/funmoments/${funmomentId}`); // Redirect to details
+    navigate(`/funmoments/${funmomentId}`); // This redirects to the details aka show page
   } catch (error) {
     console.log(error);
   }
