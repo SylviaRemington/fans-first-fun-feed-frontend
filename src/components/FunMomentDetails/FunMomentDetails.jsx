@@ -10,24 +10,14 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
 
-  // Original Version:
-  // const params = useParams();
-  // console.log(params.id);
-
   const { id } = useParams();
 
   // The 'funmoment' in the state is what I'll be using in my return:
   const [funmoment, setFunMoment] = useState(null);
-  // const funmomentId = params.id;
-
-  // Addtl Version
-  // const { id } = useParams;
-  // console.log(id);
 
   useEffect(() => {
     // Setting up our data fetching function & call the show function with that id (because the funmomentService needs the id for the show function)
     const getData = async () => {
-      // const funmomentToShow = await funmomentService.show(funmomentId); //!check this id part to make sure I don't need funmomentId instead. Was originally params.id & I changed it; but not sure if it should have been params.funmomentId.
       const funmomentToShow = await funmomentService.show(id);
       console.log(funmomentToShow);
       setFunMoment(funmomentToShow);
@@ -55,10 +45,6 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
 
   if (!funmoment) return <main>Loading...</main>;
 
-  // Original return used:
-  // return <main>Fun Moment Details</main>;
-
-  // Updated return I'm using now:
   return (
     <main>
       <section>
@@ -83,12 +69,6 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
       </section>
 
 
-      {/* Originally just had this basic comments section. */}
-      {/* <section>
-        <h2>Comments</h2>
-      </section> */}
-
-
       {/* Updated comments section */}
       <section>
         <h2>Comments</h2>
@@ -97,7 +77,6 @@ const FunMomentDetails = ({ handleDeleteFunMoment }) => {
         {/* This is going to call the funmomentService, get the newComment and then will set the new state of the fun moment. */}
         <CommentForm handleAddComment={(formData) => handleAddComment(formData)} funmomentId={id} />
 
-        {/* THIS LINE BELOW I MIGHT TAKE OUT ONCE I'VE FULLY FINISHED THE APP. */}
         {!funmoment.comments.length && (
           <p>
             There are no comments currently. Be the first to comment! Yuuus.
