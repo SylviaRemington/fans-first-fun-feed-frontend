@@ -5,7 +5,7 @@ import * as funmomentService from "../../services/funmomentService";
 
 import { UserContext } from "../../contexts/UserContext";
 
-const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment, funmoments }) => {
+const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment, handleDeleteComment, funmoments }) => {
   // Setting up the useContext & UserContext here:
   const { user } = useContext(UserContext);
   const navigate = useNavigate();
@@ -26,10 +26,10 @@ const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment, funmomen
   }, [id]);
 
   const handleAddComment = async (commentFormData) => {
-  const newComment = await funmomentService.createComment(id, commentFormData);
+    const newComment = await funmomentService.createComment(id, commentFormData);
     // the spread funmoment, updating the comments with the existing ones, and then the new one
     // Spreading in the original funmoment, taking the comments on the funmoment, spreading the original comments and adding the newComment.
-    setFunMoment({...funmoment, comments: [...funmoment.comments, newComment] });
+    setFunMoment({ ...funmoment, comments: [...funmoment.comments, newComment] });
   };
 
   const deleteFunMoment = () => {
@@ -37,8 +37,12 @@ const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment, funmomen
   }
 
   const editFunMoment = () => {
-  navigate(`/funmoments/${id}/edit`);
-}
+    navigate(`/funmoments/${id}/edit`);
+  }
+
+  const deleteComment = async (commentId) => {
+    await handleDeleteComment(id, commentId);
+  };
 
   // Verifying the funmoment state is set correctly:
   console.log("funmoment state:", funmoment);
@@ -57,8 +61,8 @@ const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment, funmomen
           </p>
           {funmoment.author._id === user._id && (
             <>
-            <button onClick={editFunMoment}>Edit</button>
-            <button onClick={deleteFunMoment}>Delete</button>
+              <button onClick={editFunMoment}>Edit</button>
+              <button onClick={deleteFunMoment}>Delete</button>
             </>
           )}
         </header>
@@ -72,7 +76,7 @@ const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment, funmomen
 
         {/* Putting CommentForm Here */}
         {/* This is going to call the funmomentService, get the newComment and then will set the new state of the fun moment. */}
-<CommentForm handleAddComment={handleAddComment} handleUpdateComment={handleUpdateComment} funmoments={funmoments} />
+        <CommentForm handleAddComment={handleAddComment} handleUpdateComment={handleUpdateComment} funmoments={funmoments} />
         {!funmoment.comments.length && (
           <p>
             There are no comments currently. Be the first to comment! Yuuus.
@@ -89,9 +93,9 @@ const FunMomentDetails = ({ handleDeleteFunMoment, handleUpdateComment, funmomen
               {comment.author._id === user._id && (
                 <>
                   {/* Adding edit button for the comments */}
-                  <button onClick={() => navigate(`/funmoments/${id}/comments/${comment._id}/edit`)} className="comment-edit-button">Edit</button> 
+                  <button onClick={() => navigate(`/funmoments/${id}/comments/${comment._id}/edit`)} className="comment-edit-button">Edit</button>
 
-                  <button className="comment-delete-button">Delete</button>
+                  <button onClick={() => deleteComment(comment._id)} className="comment-delete-button">Delete</button>
                 </>
               )}
             </header>

@@ -75,10 +75,10 @@ const updateComment = async (funmomentId, commentId, commentData) => {
   }
 };
 
-// Delete FunMoment
-const deleteFunMoment = async (funmomentId) => {
+// Delete the comment
+const deleteComment = async (funmomentId, commentId) => {
   try {
-    const res = await axios.delete(`${BASE_URL}/${funmomentId}`, {
+    const res = await axios.delete(`${BASE_URL}/${funmomentId}/comments/${commentId}`, {
       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
     });
     return res.data;
@@ -86,7 +86,6 @@ const deleteFunMoment = async (funmomentId) => {
     console.log(error);
   }
 };
-
 
 // Update FunMoment
 const update = async (funmomentId, formData) => {
@@ -100,4 +99,18 @@ const update = async (funmomentId, formData) => {
   }
 };
 
-export { index, show, create, createComment, deleteFunMoment, update, updateComment };
+// Delete FunMoment
+const deleteFunMoment = async (funmomentId) => {
+  try {
+    const res = await axios.delete(`${BASE_URL}/${funmomentId}`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+    });
+    return res.data;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+
+export { index, show, create, createComment, deleteFunMoment, update, updateComment, deleteComment };
+

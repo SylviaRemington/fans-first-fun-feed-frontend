@@ -47,14 +47,14 @@ const App = () => {
 
   // Updating FunMoment function
   const handleUpdateFunMoment = async (funmomentId, formData) => {
-  try {
-    const updatedFunMoment = await funmomentService.update(funmomentId, formData);
-    setFunMoments(funmoments.map((fm) => (fm._id === funmomentId ? updatedFunMoment : fm)));
-    navigate(`/funmoments/${funmomentId}`);
-  } catch (error) {
-    console.log(error);
-  }
-};
+    try {
+      const updatedFunMoment = await funmomentService.update(funmomentId, formData);
+      setFunMoments(funmoments.map((fm) => (fm._id === funmomentId ? updatedFunMoment : fm)));
+      navigate(`/funmoments/${funmomentId}`);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   // Delete FunMoment function
   const handleDeleteFunMoment = async (funmomentId) => {
@@ -71,17 +71,31 @@ const App = () => {
 
   // Updating Functionality for Comment Section
   const handleUpdateComment = async (funmomentId, commentId, commentData) => {
-  try {
-    const updatedComment = await funmomentService.updateComment(funmomentId, commentId, commentData);
-    // Update the funmoments state to reflect the change (find the funmoment and update its comments)
-    setFunMoments(funmoments.map(fm => fm._id === funmomentId 
-      ? { ...fm, comments: fm.comments.map(c => c._id === commentId ? updatedComment : c) }
-      : fm));
-    navigate(`/funmoments/${funmomentId}`); // This redirects to the details page aka show page.
-  } catch (error) {
-    console.log(error);
-  }
-};
+    try {
+      const updatedComment = await funmomentService.updateComment(funmomentId, commentId, commentData);
+      // Update the funmoments state to reflect the change (find the funmoment and update its comments)
+      setFunMoments(funmoments.map(fm => fm._id === funmomentId
+        ? { ...fm, comments: fm.comments.map(c => c._id === commentId ? updatedComment : c) }
+        : fm));
+      navigate(`/funmoments/${funmomentId}`); // This redirects to the details page aka show page.
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // Delete Functionality for Comment Section
+  const handleDeleteComment = async (funmomentId, commentId) => {
+    try {
+      await funmomentService.deleteComment(funmomentId, commentId);
+      setFunMoments(funmoments.map(fm => fm._id === funmomentId
+        ? { ...fm, comments: fm.comments.filter(c => c._id !== commentId) }
+        : fm));
+      navigate(`/funmoments/${funmomentId}`);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
 
   return (
     <>
@@ -93,8 +107,7 @@ const App = () => {
         {/* Protected Route below /funmoments that is only available if you are signed in as a user. */}
         {/* Need to pass the FunMoments data in into the FunMomentList component. */}
         <Route path="funmoments" element={<FunMomentList funmoments={funmoments} />} />
-       <Route path="/funmoments/:id" element={<FunMomentDetails handleDeleteFunMoment={handleDeleteFunMoment} handleUpdateComment={handleUpdateComment} funmoments={funmoments} />} />
-        <Route path="/funmoments/new" element={<FunMomentForm handleAddFunMoment={handleAddFunMoment} />} />
+        <Route path="/funmoments/:id" element={<FunMomentDetails handleDeleteFunMoment={handleDeleteFunMoment} handleUpdateComment={handleUpdateComment} handleDeleteComment={handleDeleteComment} funmoments={funmoments} />} />        <Route path="/funmoments/new" element={<FunMomentForm handleAddFunMoment={handleAddFunMoment} />} />
         <Route path="/funmoments/:id/edit" element={<FunMomentForm handleUpdateFunMoment={handleUpdateFunMoment} funmoments={funmoments} />} />
         <Route path="/funmoments/:funmomentId/comments/:commentId/edit" element={<CommentForm handleUpdateComment={handleUpdateComment} funmoments={funmoments} />} />
       </Routes>
