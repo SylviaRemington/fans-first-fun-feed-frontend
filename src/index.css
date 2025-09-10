@@ -1,77 +1,7 @@
-/* :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-} */
-
-/* New CSS that is not react generated */
 body {
   font-family: Arial, sans-serif;
-  color:#e3eaef; /* #3C414F #212121 Dark gray for readable text */
-  background-color: #1A2649 ; /* #e0f7fa Light blue background */
+  color:#e3eaef; 
+  background-color: #1A2649 ; 
   margin: 0;
   padding: 0;
 }
@@ -129,7 +59,8 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
-  color: #1e88e5;
+  color: white; 
+  /* could use this later #1e88e5; */
 }
 
 p {
@@ -155,11 +86,11 @@ label {
 } */
 
 .comment-box, .comment-box p {
-  color: #000000; /* Darker black for better contrast on yellow (~14.5:1 ratio, passes AA/AAA) */
+  color: #000000; /* Darker black for better contrast on yellow */
 }
 
 .comment-author-date {
-  color: #000000; /* Dark black for 14.5:1 contrast on yellow background (passes WCAG AA/AAA) */
+  color: #000000; /* Dark black for better contrast */
 }
 
 input, textarea, select {
@@ -181,9 +112,9 @@ button {
 }
 
 .comment-delete-button {
-  border: 1px solid #1A2649; /* Blue outline around the button (1px thick, solid line) */
-  background-color: #ffd700; /* Keep yellow background */
-  color: #1A2649; /* Keep dark text */
+  border: 1px solid #1A2649; /* Blue outline around the button */
+  background-color: #ffd700; 
+  color: #1A2649; 
   padding: 0.5rem 1rem; /* Adjust padding if needed for size */
   border-radius: 4px;
 }
@@ -201,7 +132,7 @@ article a.button {
 
 /* Button for sign-in */
 button:hover {
-  background-color: #2e7d32; /* Vibrant green on hover */
+  background-color: #2e7d32; /* green on hover */
   color: #ffffff;
 }
 
