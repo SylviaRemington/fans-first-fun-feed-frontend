@@ -20,13 +20,6 @@ const App = () => {
   // creating a new useState()
   const [funmoments, setFunMoments] = useState([]);
 
-  // need to set up a useEffect hook that will fetch the data
-  // useEffect(() => {
-  // in here is where it will fetch the funmoments
-  // and when fetch the funmoments, gonna need state
-  // }, []);
-
-  // Using our effect to trigger index() service function:
   useEffect(() => {
     const fetchAllFunMoments = async () => {
       const funmomentsData = await funmomentService.index();
@@ -38,7 +31,7 @@ const App = () => {
     if (user) fetchAllFunMoments();
   }, [user]);
 
-  //Handle function
+  // Handle function
   // My handleAddFunMoment needs to accept formData.
   const handleAddFunMoment = async (formData) => {
     try {
@@ -51,11 +44,6 @@ const App = () => {
       console.log(error);
     }
   };
-  // Addtl handle function (version from class if I'd like to use that instead)
-  // const handleAddFunMoment = async (funmomentFormData) => {
-  //   console.log("funmomentFormData", funmomentFormData);
-  //   navigate("/funmoments");
-  // };
 
   // Updating FunMoment function
   const handleUpdateFunMoment = async (funmomentId, formData) => {
@@ -89,7 +77,7 @@ const App = () => {
     setFunMoments(funmoments.map(fm => fm._id === funmomentId 
       ? { ...fm, comments: fm.comments.map(c => c._id === commentId ? updatedComment : c) }
       : fm));
-    navigate(`/funmoments/${funmomentId}`); // This redirects to the details aka show page
+    navigate(`/funmoments/${funmomentId}`); // This redirects to the details page aka show page.
   } catch (error) {
     console.log(error);
   }
@@ -107,8 +95,6 @@ const App = () => {
         <Route path="funmoments" element={<FunMomentList funmoments={funmoments} />} />
         <Route path="/funmoments/:id" element={<FunMomentDetails handleDeleteFunMoment={handleDeleteFunMoment} handleUpdateComment={handleUpdateComment} />} />
         <Route path="/funmoments/new" element={<FunMomentForm handleAddFunMoment={handleAddFunMoment} />} />
-        {/* Commenting out below route until I can figure out the bug I have with my updating code */}
-        {/* <Route path="/funmoments/:id/edit" element={<FunMomentForm />} /> */}
         <Route path="/funmoments/:id/edit" element={<FunMomentForm handleUpdateFunMoment={handleUpdateFunMoment} funmoments={funmoments} />} />
         <Route path="/funmoments/:funmomentId/comments/:commentId/edit" element={<CommentForm handleUpdateComment={handleUpdateComment} funmoments={funmoments} />} />
       </Routes>
