@@ -7,7 +7,10 @@ body {
 }
 
 .welcome-text {
-  color: #1e88e5; 
+  color: #1A2649;
+  /* Additional color I tried that I liked the most but not enough contrast - color: #1570c0; */
+  /* Original lighter used but doesn't fit guidelines (even though personally I like this one better) - color: #1e88e5;  */
+  /* Third color version gone through #002060*/
   font-weight: bold;
 }
 
@@ -38,7 +41,9 @@ nav a {
 }
 
 nav a:hover {
-  color: #1e88e5; /* blue on hover */
+  color: #006B00;
+  /* color: #1570c0; blue on hover but not enough contrast even though I love this color on it. */
+  /* color: #0c8112; green on hover but not enough contrast */
 }
 
 article {
@@ -65,7 +70,7 @@ h2 {
 }
 
 .funmoment-title {
-  color: #1e88e5; /* Blue for Fun Moment titles on list page, 5.2:1 contrast on #1A2649 */
+  color: #1e88e5; /* Blue for Fun Moment titles */
 }
 
 p {
