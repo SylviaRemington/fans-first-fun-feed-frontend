@@ -21,19 +21,6 @@ const index = async () => {
   }
 };
 
-// Show function
-// First Version
-// const show = async (funmomentId) => {
-//   try {
-//     const res = await axios.get(`${BASE_URL}/${funmomentId}`, {
-//       headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
-//     });
-//     return res.data;
-//   } catch (error) {
-//     console.log(error);
-//   }
-// };
-
 // New Show function
 const show = async (funmomentId, options = {}) => {
   try {
@@ -125,4 +112,5 @@ const deleteFunMoment = async (funmomentId) => {
 
 
 export { index, show, create, createComment, deleteFunMoment, update, updateComment, deleteComment };
+
 

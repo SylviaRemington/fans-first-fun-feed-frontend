@@ -70,7 +70,7 @@ h2 {
 }
 
 .funmoment-title {
-  color: #1e88e5; /* Blue for Fun Moment titles */
+  color: #1e88e5; /* Blue for FunMoment title section */
 }
 
 p {
@@ -96,11 +96,11 @@ label {
 } */
 
 .comment-box, .comment-box p {
-  color: #000000; /* Darker black for better contrast on yellow */
+  color: #000000; /* black for better contrast on yellow */
 }
 
 .comment-author-date {
-  color: #000000; /* Dark black for better contrast */
+  color: #000000; /* black for better contrast */
 }
 
 input, textarea, select {
@@ -121,7 +121,7 @@ button {
 }
 
 .comment-delete-button {
-  border: 1px solid #1A2649; /* Blue outline around the button - 1px thick, solid line */
+  border: 1px solid #1A2649; /* outline around the button - 1px thick, solid line */
   background-color: #ffd700; 
   color: #1A2649; 
   padding: 0.5rem 1rem; 
@@ -139,7 +139,7 @@ button {
 /* This below didn't fix the css yet */
 button:active, button:focus {
   color: #1A2649; /* Keeping text color consistent with button default - the browser's default setting are making it turn red */
-  outline: none; /* Removing default focus outline */
+  outline: none; /* Removing default focus outline - but it doesn't seem to work yet. */
 }
 
 article a.button {
