@@ -42,19 +42,7 @@ Thanks to this template, this Express application will already be able to sign u
 
 To demonstrate JWT Authentication, my Express application will use verifyToken to protect all routes related to the hoot resource. This means users will be required to sign in before getting access to any Fans First Fun Feed data.
 
-
 <hr>
-
-
-
-
-
-
-
-
-
-
-
 
 ## User stories
 
