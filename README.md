@@ -41,6 +41,8 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 
 **The app was built to bring fans together to celebrate and share their unique, fun experiences at Savannah Bananas events, with a stretch goal to add features like dance move uploads, tutorials and likes.**
 
+<br>
+(POSSIBLY ADD ANY OF THIS IF NOT MENTIONED ABOVE:BFeatures -- eg sign in / registerr to your own account, view funmoments, create funmoments, update funmoments, delete funmoments, and be able to comment on funmoments)
 <hr>
 
 # **Inspiration** 
@@ -48,18 +50,42 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 
 <hr>
 
-- **Getting started** -- a link to my planning materials or info about it & a link to my backend
-- Features -- eg sign in / registerr to your own account, view funmoments, create funmoments, update funmoments, delete funmoments, and be able to comment on funmoments
-- **Tech / Technologies Used**
-- **Attributions** -- includes any external resources such as libraries or assets - but can leave this out if not applicable.
-- Rough Drafts & beginning version of projects
-- Wireframes -- showing screenshot of frontend and backend vscode folders
-- Tree -- showing screenshot of frontend and backend tree
-- **Next Steps/Future Enhancements**
-- **Stretch Goals**
-- **Finding Out About Cachebust**
+# **Getting started** 
+-- a link to my planning materials or info about it & a link to my backend
 
-### About Express API JWT Auth Template:
+<hr>
+
+# **Tech / Technologies Used**
+
+<hr>
+
+# **Attributions** 
+-- includes any external resources such as libraries or assets - but can leave this out if not applicable.
+
+<hr>
+
+# Rough Drafts & beginning version of projects
+
+<hr>
+
+# Wireframes 
+-- showing screenshot of frontend and backend vscode folders
+
+<hr>
+
+# Tree 
+-- showing screenshot of frontend and backend tree
+
+<hr>
+
+# **Next Steps/Future Enhancements**
+
+<hr>
+
+# **Stretch Goals**
+
+<hr>
+
 ### About Express API JWT Auth Template:
 My Express API will make use of the Express API JWT Auth Template. This template provides this Express application with pre configured JWT Authentication. This style of authentication in HTTP uses tokens, or unique identifier strings, to tell who a user is when they’re making an authenticated request.
 
@@ -95,6 +121,8 @@ Component hierarchy diagram
 
 
 -------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+MAYBE DELETE EVERYTHING BELOW HERE:
 
 ADDTL INFO I HAD IN BACKEND THAT I MIGHT USE HERE:
 
