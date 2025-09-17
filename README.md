@@ -24,7 +24,7 @@ This app will, most likely, be simplified a lot; and start out as a way for fans
 # Additional Sections
 ## **App Description and Functionality**
 
-Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fans to share and engage with memorable moments from Banana Ball baseball games! Inspired by the vibrant community spirit of the Bananas, the app allows users to connect by posting, viewing, updating, and deleting "Fun Moments" (e.g., trick plays, cool dances, mascot antics, etc.) and commenting on them. 
+Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fans to share and engage with memorable moments from Banana Ball baseball games! Inspired by the vibrant community-spirit of the Savannah Bananas and what they create at their games/shows/events, the app allows users to connect by posting, viewing, updating, and deleting "Fun Moments" (e.g., trick plays, cool dances, mascot antics, etc.) and commenting on them. 
 
 ### Key features include:
 
@@ -38,7 +38,7 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 
 - **Navigation:** React router enables navigation between landing, dashboard, sign-in/sign-up, Fun Moments list, details, and create/edit pages.
 
-The app was built to bring fans together to celebrate and share their unique, fun experiences at Savannah Bananas events, with a stretch goal to add features like dance move uploads, tutorials and likes.
+**The app was built to bring fans together to celebrate and share their unique, fun experiences at Savannah Bananas events, with a stretch goal to add features like dance move uploads, tutorials and likes.**
 
 
 
