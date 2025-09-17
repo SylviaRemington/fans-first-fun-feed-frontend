@@ -21,8 +21,8 @@ This app will, most likely, be simplified a lot; and start out as a way for fans
 **Thus, to recap:** <br>
 **I’ll build an Express API that serves as the BACKEND for a full-stack "moment-sharing" application called Fans First Fun Feed. Within this Express API, I’ll implement full CRUD functionality and test it with Postman.**
 
-### Addtl Sections:
-- **Description of app and functionality**
+# Additional Sections
+## **Description of app and functionality**
 - **Inspiration** -- inspiration and thoughts behind creating this app / background info about the app & why I built it.
 - **Getting started** -- a link to my planning materials or info about it & a link to my backend
 - Features -- eg sign in / registerr to your own account, view funmoments, create funmoments, update funmoments, delete funmoments, and be able to comment on funmoments
