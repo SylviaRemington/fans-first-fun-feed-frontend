@@ -22,7 +22,47 @@ This app will, most likely, be simplified a lot; and start out as a way for fans
 **I’ll build an Express API that serves as the BACKEND for a full-stack "moment-sharing" application called Fans First Fun Feed. Within this Express API, I’ll implement full CRUD functionality and test it with Postman.**
 
 # Additional Sections
-## **Description of app and functionality**
+## **App Description and Functionality**
+
+Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fans to share and engage with memorable moments from Banana Ball baseball games! Inspired by the vibrant community spirit of the Bananas, the app allows users to connect by posting, viewing, updating, and deleting "Fun Moments" (e.g., trick plays, cool dances, mascot antics, etc.) and commenting on them. 
+
+### Key features include:
+
+- **User Authentication:** Secure sign-up and sign-in with JWT-based authentication, ensuring only registered users can create, edit, or delete content.
+
+- **Fun Moment CRUD:** Authenticated users can create "Fun Moments" with a title, text, and category (e.g., Trick Plays, Cool Dances), view a list of all Fun Moments, update their own Fun Moments, and delete them from the details page.
+
+- **Comment System:** Users can add comments to Fun Moments, edit their own comments via a dedicated pre-filled form, and delete their comments, fostering community interaction.
+
+- **Responsive UI:** Built with React and styled with CSS, the app features a cohesive design with WCAG-compliant contrast (e.g., dark text on yellow backgrounds, blue-bordered buttons), using Flexbox for layout and Vite for fast development.
+
+- **Navigation:** React router enables navigation between landing, dashboard, sign-in/sign-up, Fun Moments list, details, and create/edit pages.
+
+The app was built to bring fans together to celebrate and share their unique, fun experiences at Savannah Bananas events, with a stretch goal to add features like dance move uploads, tutorials and likes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - **Inspiration** -- inspiration and thoughts behind creating this app / background info about the app & why I built it.
 - **Getting started** -- a link to my planning materials or info about it & a link to my backend
 - Features -- eg sign in / registerr to your own account, view funmoments, create funmoments, update funmoments, delete funmoments, and be able to comment on funmoments
