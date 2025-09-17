@@ -58,9 +58,10 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 - **Finding Out About Cachebust**
 
 ### About Express API JWT Auth Template:
+### About Express API JWT Auth Template:
 My Express API will make use of the Express API JWT Auth Template. This template provides this Express application with pre configured JWT Authentication. This style of authentication in HTTP uses tokens, or unique identifier strings, to tell who a user is when they’re making an authenticated request.
 
-Thanks to this template, this Express application will already be able to sign up and sign in users. The template also includes a verifyToken middleware function. The verifyToken middleware ensures that any route following it in the middleware pipeline will require authentication before proceeding.
+Thus, this Express application will be able to sign up and sign in users. Additionally, it includes a verifyToken middleware function. The verifyToken middleware ensures that any route following it in the middleware pipeline will require authentication before proceeding.
 
 To demonstrate JWT Authentication, my Express application will use verifyToken to protect all routes related to the hoot resource. This means users will be required to sign in before getting access to any Fans First Fun Feed data.
 
@@ -95,14 +96,6 @@ Component hierarchy diagram
 
 ADDTL INFO I HAD IN BACKEND THAT I MIGHT USE HERE:
 
-### About Express API JWT Auth Template:
-My Express API will make use of the Express API JWT Auth Template. This template provides this Express application with pre configured JWT Authentication. This style of authentication in HTTP uses tokens, or unique identifier strings, to tell who a user is when they’re making an authenticated request.
-
-Thanks to this template, this Express application will already be able to sign up and sign in users. The template also includes a verifyToken middleware function. The verifyToken middleware ensures that any route following it in the middleware pipeline will require authentication before proceeding.
-
-To demonstrate JWT Authentication, my Express application will use verifyToken to protect all routes related to the hoot resource. This means users will be required to sign in before getting access to any Fans First Fun Feed data.
-
-<hr>
 
 ## Utilizing Express JWT Auth Template 
 ### --As per class suggestion for more ease creating backend api--
@@ -137,12 +130,7 @@ npm run dev
 ```
 
 
-### About Express API JWT Auth Template:
-My Express API will make use of the Express API JWT Auth Template. This template provides this Express application with pre configured JWT Authentication. This style of authentication in HTTP uses tokens, or unique identifier strings, to tell who a user is when they’re making an authenticated request.
 
-Thus, this Express application will be able to sign up and sign in users. Additionally, it includes a verifyToken middleware function. The verifyToken middleware ensures that any route following it in the middleware pipeline will require authentication before proceeding.
-
-To demonstrate JWT Authentication, my Express application will use verifyToken to protect all routes related to the hoot resource. This means users will be required to sign in before getting access to any Fans First Fun Feed data.
 
 
 <hr>
