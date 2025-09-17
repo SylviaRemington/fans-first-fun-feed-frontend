@@ -23,7 +23,6 @@ This app will, most likely, be simplified a lot; and start out as a way for fans
 
 <hr>
 
-# Additional Sections
 # **App Description and Functionality**
 
 Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fans to share and engage with memorable moments from Banana Ball baseball games! Inspired by the vibrant community-spirit of the Savannah Bananas and what they create at their games/shows/events, the app allows users to connect by posting, viewing, updating, and deleting "Fun Moments" (e.g., trick plays, cool dances, mascot antics, etc.) and commenting on them. 
