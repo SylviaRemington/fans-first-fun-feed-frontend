@@ -42,7 +42,7 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 **The app was built to bring fans together to celebrate and share their unique, fun experiences at Savannah Bananas events, with a stretch goal to add features like dance move uploads, tutorials and likes.**
 
 <br>
-(POSSIBLY ADD ANY OF THIS IF NOT MENTIONED ABOVE:BFeatures -- eg sign in / registerr to your own account, view funmoments, create funmoments, update funmoments, delete funmoments, and be able to comment on funmoments)
+(POSSIBLY ADD ANY OF THIS IF NOT MENTIONED ABOVE: Features -- eg sign in / registerr to your own account, view funmoments, create funmoments, update funmoments, delete funmoments, and be able to comment on funmoments)
 <hr>
 
 # **Inspiration** 
@@ -119,80 +119,4 @@ Component hierarchy diagram
 
 (Notice how most of my components will require a client-side route. This is because I will treat these components as distinct pages in my app. Components not marked as requiring a route will be used as subcomponents making up the UI of a page.)
 
-
 -------------------------------------------------------------------------------------
--------------------------------------------------------------------------------------
-MAYBE DELETE EVERYTHING BELOW HERE:
-
-ADDTL INFO I HAD IN BACKEND THAT I MIGHT USE HERE:
-
-
-## Utilizing Express JWT Auth Template 
-### --As per class suggestion for more ease creating backend api--
-
-## About
-
-This repo is an Express JWT Auth template meant to be paired with a front-end app utilizing JWT tokens.
-
-## Getting started
-
-Fork and clone this repository to your local machine.
-
-After moving into the cloned directory, run `npm i` to download the dependencies.
-
-Create a `.env` file in the root of the project:
-
-```bash
-touch .env
-```
-
-and add your MongoDB URI and a secret JWT string to it. Your MongoDB URI will look something like the first entry, but with your username and password:
-
-```plaintext
-MONGODB_URI=mongodb+srv://<username>:<password>@sei.azure.mongodb.net/myApp?retryWrites=true
-JWT_SECRET=supersecret
-```
-
-Start the app in your terminal with:
-
-``` sh
-npm run dev
-```
-
-
-
-
-
-<hr>
-
-## Utilizing Express JWT Auth Template 
-### --As per class suggestion for more ease creating backend api--
-
-## About
-
-This repo is an Express JWT Auth template meant to be paired with a front-end app utilizing JWT tokens.
-
-## Getting started
-
-Fork and clone this repository to your local machine.
-
-After moving into the cloned directory, run `npm i` to download the dependencies.
-
-Create a `.env` file in the root of the project:
-
-```bash
-touch .env
-```
-
-and add your MongoDB URI and a secret JWT string to it. Your MongoDB URI will look something like the first entry, but with your username and password:
-
-```plaintext
-MONGODB_URI=mongodb+srv://<username>:<password>@sei.azure.mongodb.net/myApp?retryWrites=true
-JWT_SECRET=supersecret
-```
-
-Start the app in your terminal with:
-
-``` sh
-npm run dev
-```
