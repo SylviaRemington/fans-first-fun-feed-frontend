@@ -46,6 +46,8 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 # **Inspiration** 
 -- inspiration and thoughts behind creating this app / background info about the app & why I built it.
 
+<hr>
+
 - **Getting started** -- a link to my planning materials or info about it & a link to my backend
 - Features -- eg sign in / registerr to your own account, view funmoments, create funmoments, update funmoments, delete funmoments, and be able to comment on funmoments
 - **Tech / Technologies Used**
