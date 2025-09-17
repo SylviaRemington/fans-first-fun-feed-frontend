@@ -21,6 +21,8 @@ This app will, most likely, be simplified a lot; and start out as a way for fans
 **Thus, to recap:** <br>
 **I’ll build an Express API that serves as the BACKEND for a full-stack "moment-sharing" application called Fans First Fun Feed. Within this Express API, I’ll implement full CRUD functionality and test it with Postman.**
 
+<hr>
+
 # Additional Sections
 ## **App Description and Functionality**
 
@@ -40,6 +42,7 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 
 **The app was built to bring fans together to celebrate and share their unique, fun experiences at Savannah Bananas events, with a stretch goal to add features like dance move uploads, tutorials and likes.**
 
+<hr>
 
 
 
