@@ -123,3 +123,4 @@ Component hierarchy diagram
 (Notice how most of my components will require a client-side route. This is because I will treat these components as distinct pages in my app. Components not marked as requiring a route will be used as subcomponents making up the UI of a page.)
 
 -------------------------------------------------------------------------------------
+
