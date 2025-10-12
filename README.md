@@ -8,6 +8,14 @@ This app is a **MERN stack app** for **Savannah Bananas** fans.
 
 **Savannah Bananas is an alternative baseball team known for dances, trick plays, and fan engagement**. 
 
+# **Inspiration** 
+(inspiration and thoughts behind creating this app / background info about the app & why I built it.)
+
+**Inspiration Behind Fans First Fun Feed**
+The Fans First Fun Feed was inspired by attending two Savannah Bananas games at the beginning of February 2025! These baseball games/shows are unlike anything else in the world. The experience is an awesome blend of baseball, dance, singing, fun games for the fans with incredible kindness from everyone involved. You meet the players before the game and the owner after, creating a sense of community. This is how I imagine the world being... a world filled with kindness where everyone is kind, caring, and joyful with one another. This app lets fans share and celebrate these special moments/memories together.
+
+<hr>
+
 The initial idea was for it to be called: The Banana Fan Dance and Moment Share App. 
 
 - Live fans will be able to add dance moves (name, type) to perform at games; while both live and online fans will be able to share favorite, awesome moments from the game (text, category like trick plays, dance moves, or Dad-bod-cheer-squad) inspired by game events or IG videos. 
@@ -41,7 +49,6 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 
 **The app was built to bring fans together to celebrate and share their unique, fun experiences at Savannah Bananas events, with a stretch goal to add features like dance move uploads, tutorials and likes.**
 
-<br>
 <hr>
 
 # Tech Stack
@@ -62,15 +69,6 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 
 **Deployment**
 - Will be deploying with Heroku (General Assembly Student set up) for backend & Netlify for front end.
-
-<br>
-<hr>
-
-# **Inspiration** 
--- inspiration and thoughts behind creating this app / background info about the app & why I built it.
-
-**Inspiration Behind Fans First Fun Feed**
-The Fans First Fun Feed was inspired by attending two Savannah Bananas games at the beginning of February 2025! These baseball games/shows are unlike anything else in the world. The experience is an awesome blend of baseball, dance, singing, fun games for the fans with incredible kindness from everyone involved. You meet the players before the game and the owner after, creating a sense of community. This is how I imagine the world being... a world filled with kindness where everyone is kind, caring, and joyful with one another. This app lets fans share and celebrate these special moments/memories together.
 
 <hr>
 
