@@ -110,14 +110,6 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 
 <hr>
 
-# Wireframes 
--- showing screenshot of frontend and backend vscode folders
-
-<hr>
-
-
-
-<hr>
 
 # **Next Steps/Future Enhancements**
 
