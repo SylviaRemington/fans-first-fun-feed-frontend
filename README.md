@@ -90,7 +90,7 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 ## Component hierarchy diagram / Wireframes
 - After reviewing the user stories, my next step was to map out the component structure of my React app. 
 
-**Below is the component hierarchy diagram for the MVP build of FunMoment:**
+**Below please find frontend and backend MVP build of FunMoment:**
 
 **Frontend** <br>
 
