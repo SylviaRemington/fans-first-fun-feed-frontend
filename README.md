@@ -37,13 +37,14 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 
 - **Responsive UI:** Built with React and styled with CSS, the app features a cohesive design with WCAG-compliant contrast (e.g., dark text on yellow backgrounds, blue-bordered buttons), using Flexbox for layout and Vite for fast development.
 
-- **Navigation:** React router enables navigation between landing, dashboard, sign-in/sign-up, Fun Moments list, details, and create/edit pages.
+- **Navigation:** React router enables navigation between landing, dashboard, sign-in/sign-up, Fun Moments list, details, and create/edit pages. You can signup (aka register your own account) / sign in, view funmoments, create funmoments, update funmoments, delete funmoments, and be able to comment on funmoments.
 
 **The app was built to bring fans together to celebrate and share their unique, fun experiences at Savannah Bananas events, with a stretch goal to add features like dance move uploads, tutorials and likes.**
 
 <br>
-(POSSIBLY ADD ANY OF THIS IF NOT MENTIONED ABOVE: Features -- eg sign in / registerr to your own account, view funmoments, create funmoments, update funmoments, delete funmoments, and be able to comment on funmoments)
 <hr>
+
+# Tech Stack
 
 # **Inspiration** 
 -- inspiration and thoughts behind creating this app / background info about the app & why I built it.
