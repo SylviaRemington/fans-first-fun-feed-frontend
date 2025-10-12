@@ -92,15 +92,15 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 
 **Below is the component hierarchy diagram for the MVP build of FunMoment:**
 
-**Frontend**
+**Frontend** <br>
 
-<img width="176" height="270" alt="tree 1 project 3" src="https://github.com/user-attachments/assets/7792f5dc-e503-4060-aa68-8f722676ef29" />
+<img width="176" height="270" alt="tree 1 project 3" src="https://github.com/user-attachments/assets/7792f5dc-e503-4060-aa68-8f722676ef29" /> <br>
 
-<img width="293" height="613" alt="tree 2 project 3" src="https://github.com/user-attachments/assets/6d11ce7f-99c8-48cf-9a59-97ebf0286215" />
+<img width="293" height="613" alt="tree 2 project 3" src="https://github.com/user-attachments/assets/6d11ce7f-99c8-48cf-9a59-97ebf0286215" /> <br>
 
 <br>
 
-**Backend**
+**Backend** <br>
 <img width="306" height="324" alt="tree backend project 3" src="https://github.com/user-attachments/assets/73fef093-ec94-4215-8351-6f2e1b017df0" />
 
 <br>
