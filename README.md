@@ -45,6 +45,23 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 <hr>
 
 # Tech Stack
+**Back End**
+- Node.js + Express.js - server
+- MongoDB + Mongoose - the database and "models" layer
+- JWT auth template - signup / signin / protected routes
+- dotenv
+- CORS - lets frontend talk to backend
+- Postman - testing my routes (e.g. get, create, update, delete)
+
+**Front End**
+- React (vite) - the app framework and dev server
+- React Router - pages and navigation for multiple screens
+- Axios - calls my Express API
+- CSS - styling
+- Auth token storage
+
+**Deployment**
+- Will be deploying with Heroku (General Assembly Student set up) for backend & Netlify for front end.
 
 # **Inspiration** 
 -- inspiration and thoughts behind creating this app / background info about the app & why I built it.
