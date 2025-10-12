@@ -106,6 +106,7 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 <br>
 
 ## Postman Routes
+<img width="1267" height="618" alt="Postman" src="https://github.com/user-attachments/assets/de7c0696-dc49-46f1-a94c-c76f26babb8d" />
 
 <hr>
 
