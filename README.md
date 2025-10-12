@@ -71,11 +71,10 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 <hr>
 
 # **Getting started** 
--- a link to my planning materials or info about it & a link to my backend
 
 ## User stories
 
-**Below are the user stories I will implement within my FunMoment:**
+**Below are the user stories I implemented within my FunMoment:**
 
 - As a guest, I should be able to create an account.
 - As a new user with an account, I should be able to log in to my account.
@@ -86,16 +85,28 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 - As the author of a funmoment, I should see a link to ‘Edit’ a funmoment on the ‘Details’ page. Clicking on the link should direct me to an ‘Edit’ page where I can modify the funmoment. Upon submitting the update, I should be redirected back to the ‘Details’ page.
 - As the author of a funmoment, I should see a button to ‘Delete’ a funmoment on the ‘Details’ page. Clicking the button should delete the funmoment and redirect me back to the ‘List’ page.
 
-**The above user stories give me a good idea of what CRUD operations a user might want to perform in my app, and I will be coding accordingly to these User Stories.**
+**The above user stories gave me a good idea of what CRUD operations a user might want to perform in my app, and I coded accordingly to these User Stories.**
 
-## Component hierarchy diagram
-- After reviewing the user stories, my next step is to map out the component structure of my React app. For this, I’ll utilize a Component Hierarchy Diagram. This visual tool will act as an outline of the tree structure in the client-side part of the app.
+## Component hierarchy diagram / Wireframes
+- After reviewing the user stories, my next step was to map out the component structure of my React app. 
 
 **Below is the component hierarchy diagram for the MVP build of FunMoment:**
 
-Component hierarchy diagram
+<br>
 
-(Notice how most of my components will require a client-side route. This is because I will treat these components as distinct pages in my app. Components not marked as requiring a route will be used as subcomponents making up the UI of a page.)
+**Frontend**
+
+
+
+
+
+
+
+
+<br>
+
+**Backend**
+
 
 <hr>
 
@@ -104,8 +115,7 @@ Component hierarchy diagram
 
 <hr>
 
-# Tree 
--- showing screenshot of frontend and backend tree
+
 
 <hr>
 
