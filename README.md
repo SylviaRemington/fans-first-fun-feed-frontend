@@ -63,6 +63,9 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 **Deployment**
 - Will be deploying with Heroku (General Assembly Student set up) for backend & Netlify for front end.
 
+<br>
+<hr>
+
 # **Inspiration** 
 -- inspiration and thoughts behind creating this app / background info about the app & why I built it.
 
