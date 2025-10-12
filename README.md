@@ -113,7 +113,7 @@ Fans First Fun Feed is a MERN stack application designed for Savannah Bananas fa
 
 # **Next Steps/Future Enhancements** <br>
 I have so many future enhancements I'd like to make. Firstly, I'd like to build this app out more.
-- I'd like to add the ability for live fans will be able to add dance moves (name, type) to perform at games; while both live and online fans will be able to share favorite, awesome moments from the game (text, category like trick plays, dance moves, or Dad-bod-cheer-squad) inspired by game events or IG videos.
+- I'd like to add the ability for live fans to be able to add dance moves (name, type) to perform at games; while both live and online fans to be able to share favorite, awesome moments from the game (text, category like trick plays, dance moves, or Dad-bod-cheer-squad) inspired by game events or IG videos.
 
 
 <hr>
