@@ -1,7 +1,7 @@
 # Fans First Fun Feed (FRONTEND)
 
 **LINK TO BACKEND GITHUB REPO:** https://github.com/SylviaRemington/fans-first-fun-feed-backend <br><br>
-**Frontend Deployed Link At:** https://fans-first-fun-feed-frontend.netlify.app/
+**Deployed Link At:** https://fans-first-fun-feed-frontend.netlify.app/
 
 ![FansFirstBlue](./public/images/smallerFansFirst.png) <br>
 
